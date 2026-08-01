@@ -1,3 +1,4 @@
+/* 全局重置 & 基础老钱底色 */
 * {
   margin: 0;
   padding: 0;
@@ -8,164 +9,201 @@ html {
 }
 body {
   background-color: #f3f1ec;
-  color: #444444;
+  color: #424242;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.85;
   font-size: 16px;
+  line-height: 1.8;
 }
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 50px;
 }
-.block {
-  padding: 60px 0;
+.section-wrap {
+  padding: 70px 0;
+}
+.bg-light {
+  background-color: #f9f7f2;
 }
 
-/* 导航栏 */
-.header {
-  padding: 40px 0 20px;
+/* 顶部导航 */
+.site-header {
+  padding: 40px 0 24px;
   border-bottom: 1px solid #b8b0a1;
 }
-.nav-wrap {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav-brand {
-  font-family: "Times New Roman", Georgia, serif;
-  font-size: 34px;
+.header-brand {
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
   font-weight: 700;
   color: #402818;
-  letter-spacing: 1.6px;
-  padding-right: 45px;
+  letter-spacing: 1.8px;
+  padding-right: 50px;
   border-right: 1px solid #b8b0a1;
 }
-.nav-menu {
+.header-nav {
   display: flex;
-  gap: 48px;
+  gap: 52px;
 }
 .nav-item {
+  font-family: "Times New Roman", serif;
+  font-size: 19px;
   color: #333;
   text-decoration: none;
-  font-size: 19px;
-  font-family: "Times New Roman", serif;
   position: relative;
 }
 .nav-item::after {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
   width: 0;
   height: 2px;
   background-color: #8c6d31;
-  transition: 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
 }
 .nav-item:hover::after {
   width: 100%;
 }
-.lang-switch {
-  border: 1px solid #80786b;
+.lang-toggle {
+  border: 1px solid #82796b;
   background: transparent;
-  color: #333;
-  padding: 8px 22px;
-  cursor: pointer;
-  transition: 0.3s;
+  padding: 9px 24px;
   font-family: "Times New Roman", serif;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
 }
-.lang-switch:hover {
-  background: #3c362d;
+.lang-toggle:hover {
+  background-color: #3c362d;
   color: #fff;
+  border-color: #3c362d;
 }
 
-/* 通用标题样式 */
-.sec-title {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  color: #222;
-  margin-bottom: 24px;
-  font-weight: normal;
-  letter-spacing: 0.7px;
-}
-.group-subtitle {
-  font-family: "Times New Roman", serif;
-  font-size: 22px;
-  color: #3c362d;
-  margin: 32px 0 12px;
-  padding-left: 10px;
-  border-left: 3px solid #8c6d31;
+/* 首页横幅 */
+.hero-banner {
+  padding: 60px 0;
+  text-align: center;
 }
 .hero-title {
   font-family: "Times New Roman", serif;
-  font-size: 38px;
+  font-size: 40px;
   color: #222;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-.hero-desc, .platform-desc, .vision-text {
+.hero-desc {
+  max-width: 800px;
+  margin: 0 auto;
   color: #555;
-  font-size: 16px;
-  text-indent: 2em;
+  font-size: 17px;
+}
+
+/* 通用大标题 */
+.section-main-title {
+  font-family: "Times New Roman", serif;
+  font-size: 33px;
+  color: #2c2116;
+  margin-bottom: 45px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d4cbbc;
+}
+
+/* ========== 公司区块样式【核心：名称一行，经营范围紧跟下一行】 ========== */
+.firm-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+/* 每个业务板块大分组 */
+.firm-group-block {
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #d1c8b8;
+}
+.firm-group-title {
+  font-family: "Times New Roman", serif;
+  font-size: 23px;
+  color: #473524;
+  margin-bottom: 22px;
+  padding-left: 12px;
+  border-left: 3px solid #8c6d31;
+}
+/* 单家公司容器 */
+.single-firm-item {
   margin-bottom: 20px;
+  padding-left: 10px;
+}
+/* 中文公司名称样式 */
+.cn-firm-name {
+  font-family: SimSun, serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: #402818;
+  letter-spacing: 0.7px;
+  display: block;
+}
+/* 外文公司名称样式 */
+.en-firm-name {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #573f2e;
+  letter-spacing: 0.9px;
+  display: block;
+}
+/* 经营范围：名称下一行，缩进弱化显示 */
+.firm-scope-text {
+  color: #545454;
+  font-size: 15.5px;
+  padding-left: 14px;
+  margin-top: 4px;
+  line-height: 1.75;
 }
 
-/* 公司列表容器：独占一行排版 */
-.company-list {
+/* 集团总业务卡片 */
+.biz-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-/* 中文公司样式 老钱深红棕 */
-.cn-firm {
-  font-family: SimSun, serif !important;
-  color: #402818 !important;
-  font-weight: bold !important;
-  font-size: 18px !important;
-  letter-spacing: 0.6px;
-  padding: 6px 10px;
-  background-color: rgba(140, 109, 49, 0.06);
-  width: fit-content;
-}
-/* 英文/海外公司 复古咖色 */
-.en-firm {
-  font-family: "Times New Roman", Georgia, serif !important;
-  color: #573f2e !important;
-  font-weight: 600 !important;
-  font-size: 17.5px !important;
-  letter-spacing: 0.8px;
-  padding: 6px 10px;
-  background-color: rgba(140, 109, 49, 0.06);
-  width: fit-content;
-}
-
-/* 业务卡片 */
-#businessWrap {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  gap: 26px;
 }
 .biz-card {
-  padding: 24px 28px;
-  background: #f9f7f2;
-  border-left: 2px solid #c2b49c;
+  padding: 28px 32px;
+  background-color: #fff;
+  border-left: 3px solid #8c6d31;
+  box-shadow: 0 1px 8px rgba(80,65,40,0.05);
 }
 .biz-card h4 {
   font-family: "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 22px;
   color: #3c362d;
   margin-bottom: 10px;
 }
+.biz-card p {
+  color: #505050;
+}
+
 /* 全球网络列表 */
 .global-list li {
-  margin: 14px 0;
-  padding-left: 14px;
-  color: #3a3a3a;
   list-style: none;
+  margin: 18px 0;
+  padding-left: 16px;
   position: relative;
+  color: #3a3a3a;
 }
 .global-list li::before {
   content: "—";
   color: #8c6d31;
   position: absolute;
   left: 0;
+}
+
+/* 底部理念文本 */
+.vision-text {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.9;
+  text-indent: 2em;
 }

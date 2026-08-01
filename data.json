@@ -3,98 +3,196 @@
     "zh": {
       "nav": {
         "brand": "一颗糖集团",
-        "about": "集团概况",
-        "business": "核心板块",
+        "about": "集团主体名录",
+        "business": "集团整体业务",
         "globalNet": "全球网络",
         "vision": "发展理念"
       },
       "hero": {
         "title": "全球化多元私营控股集团",
-        "desc": "依托长期价值投资与全域品牌资产管理体系，布局文创产业、高原特色农业、人工智能三大核心业务赛道"
-      },
-      "platformTitle": "集团统筹职能平台",
-      "platformDesc": "两大平台负责集团资本管控、品牌IP整体运维工作"
+        "desc": "依托长期价值投资与全域品牌资产管理体系，布局文创产业、高原特色农业、人工智能健康设备三大长期赛道。"
+      }
     },
     "en": {
       "nav": {
         "brand": "YKT Group",
-        "about": "Group Profile",
-        "business": "Core Sectors",
+        "about": "Group Entities",
+        "business": "Group Business",
         "globalNet": "Global Network",
-        "vision": "Development Philosophy"
+        "vision": "Corporate Vision"
       },
       "hero": {
-        "title": "Globalized Diversified Private Holding Group",
-        "desc": "Based on long-term value investment and comprehensive brand asset management system, the group develops three core businesses: cultural and creative industry, plateau featured agriculture and artificial intelligence."
-      },
-      "platformTitle": "Group Centralized Functional Platform",
-      "platformDesc": "Two platforms manage group capital control and overall operation of brand IP."
+        "title": "Global Diversified Private Holding Group",
+        "desc": "Focus on long-term value investment & brand asset management, covering cultural creativity, plateau agriculture, AI medical hardware industries."
+      }
     }
   },
-  "companyList": {
-    "zh": {
-      "parentGroup": "一颗糖集团",
-      "investmentPlatform": ["春能优方投资有限公司", "北京一颗糖文化科技有限公司"],
-      "culturalSub": ["江苏撒蜜之城网络艺术科技有限公司", "北京撒蜜之城科技有限公司"],
-      "agriSub": ["青海九色田野生物科技有限公司"],
-      "aiMedSub": ["上海慧迩美医疗科技有限公司", "成都慧迩美科技有限公司"],
-      "overseaEntity": ["YIKETANG SS SDN. BHD."]
-    },
-    "en": {
-      "parentGroup": "YKT Group",
-      "investmentPlatform": ["Chuneng Youfang Investment Co., Ltd.", "Beijing Yiketang Culture & Technology Co., Ltd."],
-      "culturalSub": ["Jiangsu Something Sweet Internet Art Technology Co., Ltd.", "Beijing Something Sweet Technology Co., Ltd."],
-      "agriSub": ["Qinghai Nine-Color Highland Biotechnology Co., Ltd."],
-      "aiMedSub": ["Shanghai Wise & Wellness Medical Technology Co., Ltd.", "Chengdu Wise & Wellness Technology Co., Ltd."],
-      "overseaEntity": ["YIKETANG SS SDN. BHD."]
-    }
-  },
-  "businessInfo": {
+  "companyData": {
     "zh": [
       {
-        "title": "文创文旅与潮流艺术",
-        "intro": "覆盖文旅项目开发、艺术IP孵化运营、潮流衍生品开发及线下展会落地，打通国内外文创双向流通渠道"
+        "groupTitle": "资本投资平台",
+        "firmList": [
+          {
+            "name": "春能优方投资有限公司",
+            "scope": "实业投资管理、股权投资、资产管理、企业管理咨询、投融资顾问服务"
+          },
+          {
+            "name": "北京一颗糖文化科技有限公司",
+            "scope": "品牌整体管理、集团IP统筹运营、文创项目孵化、品牌策划与视觉设计服务"
+          }
+        ]
       },
       {
-        "title": "高原生态农业与跨境食品",
-        "intro": "主营高原油料、牛羊肉、特色杂粮产品，依托国内电商渠道同步拓展海外经销市场"
+        "groupTitle": "文创艺术板块企业",
+        "firmList": [
+          {
+            "name": "江苏撒蜜之城网络艺术科技有限公司",
+            "scope": "数字艺术创作、线上艺术平台运营、潮流衍生品设计、文旅方案策划执行"
+          },
+          {
+            "name": "北京撒蜜之城科技有限公司",
+            "scope": "跨境文创贸易、国内外展会落地执行、艺术版权交易、新媒体内容运营"
+          }
+        ]
       },
       {
-        "title": "人工智能与健康科技",
-        "intro": "研发、销售AI智能医疗硬件设备，专注智能算法研发与数字化业务海外布局"
+        "groupTitle": "高原生态农业板块",
+        "firmList": [
+          {
+            "name": "青海九色田野生物科技有限公司",
+            "scope": "高原农牧产品加工、特色粮油与肉品分装、农产品线上线下销售、跨境食品出口报备"
+          }
+        ]
+      },
+      {
+        "groupTitle": "AI医疗健康科技板块",
+        "firmList": [
+          {
+            "name": "上海慧迩美医疗科技有限公司",
+            "scope": "智能医疗硬件研发、医疗器械销售、健康算法开发、医疗机构配套技术服务"
+          },
+          {
+            "name": "成都慧迩美科技有限公司",
+            "scope": "智能设备本地化运维、健康数字化系统搭建、西南区域渠道拓展与售后支持"
+          }
+        ]
+      },
+      {
+        "groupTitle": "马来西亚境外全资法人",
+        "firmList": [
+          {
+            "name": "YIKETANG SS SDN. BHD.",
+            "scope": "东南亚本土商品分销、马国本地商务对接、清真认证配套、区域仓储物流管理"
+          }
+        ]
       }
     ],
     "en": [
       {
-        "title": "Cultural Tourism & Trend Art",
-        "intro": "Includes cultural tourism construction, art IP incubation & operation, trendy derivative products and offline exhibitions, building bidirectional circulation channels for cultural products at home and abroad."
+        "groupTitle": "Capital Investment Platform",
+        "firmList": [
+          {
+            "name": "Chuneng Youfang Investment Co., Ltd.",
+            "scope": "Industrial investment, equity investment, asset management, enterprise management consulting, investment & financing consulting"
+          },
+          {
+            "name": "Beijing Yiketang Culture & Technology Co., Ltd.",
+            "scope": "Group brand management, IP operation management, cultural project incubation, brand planning & visual design"
+          }
+        ]
       },
       {
-        "title": "Plateau Eco-Agriculture & Cross-border Food",
-        "intro": "Produces plateau oil crops, beef, mutton and characteristic grains, expanding overseas distribution alongside domestic e-commerce channels."
+        "groupTitle": "Cultural & Art Subsidiaries",
+        "firmList": [
+          {
+            "name": "Jiangsu Something Sweet Internet Art Technology Co., Ltd.",
+            "scope": "Digital artwork creation, online art platform operation, trendy derivative development, cultural tourism planning"
+          },
+          {
+            "name": "Beijing Something Sweet Technology Co., Ltd.",
+            "scope": "Cross-border cultural goods trading, exhibition organization, art copyright trading, new media content operation"
+          }
+        ]
       },
       {
-        "title": "AI & Healthcare Technology",
-        "intro": "Develops and sells AI medical hardware; focuses on algorithm research and overseas deployment of digital services."
+        "groupTitle": "Plateau Eco-Agriculture Enterprise",
+        "firmList": [
+          {
+            "name": "Qinghai Nine-Color Highland Biotechnology Co., Ltd.",
+            "scope": "Highland agricultural processing, grain & meat packaging, domestic sales & cross-border agricultural product export"
+          }
+        ]
+      },
+      {
+        "groupTitle": "AI Medical & Health Technology",
+        "firmList": [
+          {
+            "name": "Shanghai Wise & Wellness Medical Technology Co., Ltd.",
+            "scope": "AI medical equipment R&D, medical device sales, health algorithm research, technical service for medical institutions"
+          },
+          {
+            "name": "Chengdu Wise & Wellness Technology Co., Ltd.",
+            "scope": "Intelligent equipment maintenance, digital health system construction, channel development & after-sales service in southwest China"
+          }
+        ]
+      },
+      {
+        "groupTitle": "Malaysia Overseas Entity",
+        "firmList": [
+          {
+            "name": "YIKETANG SS SDN. BHD.",
+            "scope": "Local product distribution in Southeast Asia, local business coordination, halal certification service, regional warehousing & logistics management"
+          }
+        ]
+      }
+    ]
+  },
+  "businessTotal": {
+    "zh": [
+      {
+        "title": "文创文旅与潮流艺术业务",
+        "desc":  "布局国内线下艺术展、文旅项目落地、数字IP开发，同时依托海外子公司完成文创产品出海分销，打通中马双向文创流通链路。"
+      },
+      {
+        "title": "高原特色农产品跨境贸易",
+        "desc": "依托青海原产地资源做标准化加工包装，面向国内电商渠道铺货，经由马来西亚公司完成东南亚市场货品清关、本地经销。"
+      },
+      {
+        "title": "人工智能医疗硬件研发销售",
+        "desc": "自研健康监测硬件与配套算法系统，国内完成资质报备销售，同步向东南亚医疗机构输出智能医疗设备与技术方案。"
+      }
+    ],
+    "en": [
+      {
+        "title": "Cultural Tourism & Trendy Art Business",
+        "desc": "Offline art exhibition, cultural tourism construction and digital IP development at home; realize cultural product export distribution via overseas subsidiaries."
+      },
+      {
+        "title": "Cross-border Trade of Highland Agricultural Products",
+        "desc": "Standardized processing based on Qinghai raw materials, supply domestic e-commerce channels, and complete customs clearance & local sales in Southeast Asia through Malaysian entity."
+      },
+      {
+        "title": "R&D & Sales of AI Medical Hardware",
+        "desc": "Self-develop health monitoring equipment and algorithm system for domestic sales, and export intelligent medical equipment & technical solutions to Southeast Asian medical institutions."
       }
     ]
   },
   "globalNetwork": {
     "zh": [
-      "国内：覆盖全国一二线城市，搭建完整仓储、物流与履约配送体系",
-      "东南亚：吉隆坡全资实体运营区域本土化销售",
-      "欧洲：巴黎办事处，对接欧盟合作资源、品牌推广与国际商务协调工作",
-      "中东：阿联酋办事处，开展农产品、潮流商品、智能硬件贸易及高端商务拓展"
+      "中国大陆：全国一二线城市搭建销售、仓储、履约整套供应链体系",
+      "东南亚吉隆坡：YIKETANG SS SDN. BHD.全权负责属地化运营、货品分销、商务洽谈",
+      "欧洲巴黎办事处：欧盟品牌推广、国际合作资源对接、海外品牌合规管理",
+      "中东阿联酋办事处：农产、文创、智能硬件的中东区域贸易拓展"
     ],
     "en": [
-      "China: Covers primary and secondary cities nationwide with mature warehousing, logistics and distribution system",
-      "Southeast Asia: Wholly-owned firm in Kuala Lumpur for localized regional sales management",
-      "Europe: Paris office responsible for EU resource docking, brand promotion and international business coordination",
-      "Middle East: UAE office for agricultural goods, trendy goods, smart hardware trading and high-end business development"
+      "China: Complete supply chain system covering sales, warehousing and distribution in major cities",
+      "Kuala Lumpur SEA: Local operation, goods distribution and business negotiation managed by YIKETANG SS SDN. BHD.",
+      "Paris Europe Office: EU brand promotion, international resource docking and overseas brand compliance management",
+      "UAE Middle East Office: Trade expansion of agricultural products, cultural goods and intelligent hardware in Middle East"
     ]
   },
   "vision": {
-    "zh": "秉持私营控股稳健运营战略，强化资本管控、品牌运营、产业协同与全球化属地化运营四项核心能力。依托跨境业务输出本土文创产品、高原优质农产与自研人工智能技术，打造具备较强抗风险能力的国际化产业集群。",
-    "en": "We adhere to stable private holding operation, improving four core capabilities including capital management, brand operation, industrial synergy and global localized management. We export local cultural works, premium plateau agricultural products and self-developed AI technologies via cross-border businesses to build an international industrial cluster with solid risk resistance."
+    "zh": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同、海外属地运营四大模块，以实体产品与自研技术作为出海核心载体，搭建抗风险能力充足的跨国产业集群。",
+    "en": "Adopt stable holding operation mode, uniformly manage capital, brand, industrial synergy and overseas localized operation, build a transnational industrial cluster with strong anti-risk capability relying on physical goods and self-developed technology."
   }
 }

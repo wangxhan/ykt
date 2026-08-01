@@ -1,97 +1,123 @@
 let siteData = null;
 let currentLang = "zh";
 
-// 初始化加载数据 + 异常捕获
-async function initLoadData() {
+// 加载JSON数据
+async function loadSourceData() {
   try {
     const res = await fetch("./data.json");
-    if (!res.ok) throw new Error("JSON文件读取失败");
+    if (!res.ok) throw new Error("JSON文件读取失败，请使用Live Server运行");
     siteData = await res.json();
-    renderPage();
-    bindLangEvent();
-    console.log("页面渲染正常");
-  } catch (err) {
-    console.error("运行异常：", err);
-    alert("请使用本地服务打开页面，禁止直接双击文件打开");
+    renderWholePage();
+    bindLangSwitch();
+    console.log("页面渲染正常，无报错");
+  } catch (error) {
+    console.error("运行错误：", error);
+    alert("禁止直接双击HTML打开文件，请使用VSCode Live Server启动预览");
   }
 }
 
-// 整体页面渲染
-function renderPage() {
-  const t = siteData.globalText[currentLang];
-  const comp = siteData.companyList[currentLang];
-  const bizData = siteData.businessInfo[currentLang];
-  const netData = siteData.globalNetwork[currentLang];
-  const visionText = siteData.vision[currentLang];
+// 整页统一渲染入口
+function renderWholePage() {
+  const langKey = currentLang;
+  const textData = siteData.globalText[langKey];
+  const companyList = siteData.companyData[langKey];
+  const totalBiz = siteData.businessTotal[langKey];
+  const globalNet = siteData.globalNetwork[langKey];
+  const visionTxt = siteData.vision[langKey];
 
-  // 导航文案赋值
-  document.getElementById("navBrand").innerText = t.nav.brand;
-  document.querySelector('[data-key="about"]').innerText = t.nav.about;
-  document.querySelector('[data-key="business"]').innerText = t.nav.business;
-  document.querySelector('[data-key="globalNet"]').innerText = t.nav.globalNet;
-  document.querySelector('[data-key="vision"]').innerText = t.nav.vision;
+  // 导航文字赋值
+  document.getElementById("navBrand").innerText = textData.nav.brand;
+  document.querySelector('[data-key="about"]').innerText = textData.nav.about;
+  document.querySelector('[data-key="business"]').innerText = textData.nav.business;
+  document.querySelector('[data-key="globalNet"]').innerText = textData.nav.globalNet;
+  document.querySelector('[data-key="vision"]').innerText = textData.nav.vision;
 
-  // 头部区块
-  document.querySelector(".hero-title").innerText = t.hero.title;
-  document.querySelector(".hero-desc").innerText = t.hero.desc;
-  document.querySelector(".platform-title").innerText = t.platformTitle;
-  document.querySelector(".platform-desc").innerText = t.platformDesc;
+  // 头部横幅
+  document.querySelector(".hero-title").innerText = textData.hero.title;
+  document.querySelector(".hero-desc").innerText = textData.hero.desc;
 
-  // 渲染各组公司
-  renderCompany("#platformCompanies", comp.investmentPlatform);
-  renderCompany("#culturalCompanies", comp.culturalSub);
-  renderCompany("#agriCompanies", comp.agriSub);
-  renderCompany("#aiMedCompanies", comp.aiMedSub);
-  renderCompany("#overseaCompanies", comp.overseaEntity);
+  // 渲染公司列表（名称一行，经营范围下一行）
+  renderAllCompanies(companyList);
+  // 渲染集团总业务
+  renderTotalBusiness(totalBiz);
+  // 全球网点
+  renderGlobalNet(globalNet);
+  // 发展理念
+  document.querySelector(".vision-text").innerText = visionTxt;
+}
 
-  // 业务板块渲染
-  const bizWrap = document.getElementById("businessWrap");
-  bizWrap.innerHTML = "";
-  bizData.forEach(item => {
+// 渲染公司区块
+function renderAllCompanies(groupArr) {
+  const container = document.getElementById("firmContainer");
+  container.innerHTML = "";
+
+  groupArr.forEach(groupItem => {
+    const groupWrap = document.createElement("div");
+    groupWrap.className = "firm-group-block";
+
+    // 板块大标题
+    const groupTitleDom = document.createElement("h3");
+    groupTitleDom.className = "firm-group-title";
+    groupTitleDom.innerText = groupItem.groupTitle;
+    groupWrap.appendChild(groupTitleDom);
+
+    // 遍历该板块内每一家公司
+    groupItem.firmList.forEach(firm => {
+      const itemDom = document.createElement("div");
+      itemDom.className = "single-firm-item";
+
+      // 公司名称DOM
+      const nameSpan = document.createElement("span");
+      const firstChar = firm.name.trim().charAt(0);
+      const isEng = /[A-Za-z]/.test(firstChar);
+      nameSpan.className = isEng ? "en-firm-name" : "cn-firm-name";
+      nameSpan.innerText = firm.name;
+
+      // 经营范围DOM
+      const scopeP = document.createElement("p");
+      scopeP.className = "firm-scope-text";
+      scopeP.innerText = firm.scope;
+
+      itemDom.appendChild(nameSpan);
+      itemDom.appendChild(scopeP);
+      groupWrap.appendChild(itemDom);
+    });
+    container.appendChild(groupWrap);
+  });
+}
+
+// 渲染集团整体业务
+function renderTotalBusiness(bizArr) {
+  const wrap = document.getElementById("bizContainer");
+  wrap.innerHTML = "";
+  bizArr.forEach(item => {
     const card = document.createElement("div");
     card.className = "biz-card";
-    card.innerHTML = `<h4>${item.title}</h4><p>${item.intro}</p>`;
-    bizWrap.appendChild(card);
+    card.innerHTML = `<h4>${item.title}</h4><p>${item.desc}</p>`;
+    wrap.appendChild(card);
   });
+}
 
-  // 全球网点
-  const globalList = document.getElementById("globalList");
-  globalList.innerHTML = "";
-  netData.forEach(item => {
+// 渲染全球网络
+function renderGlobalNet(listArr) {
+  const ul = document.getElementById("globalList");
+  ul.innerHTML = "";
+  listArr.forEach(txt => {
     const li = document.createElement("li");
-    li.innerText = item;
-    globalList.appendChild(li);
-  });
-
-  // 理念文案
-  document.querySelector(".vision-text").innerText = visionText;
-}
-
-// 渲染公司条目，自动区分中英文样式
-function renderCompany(selector, nameArray) {
-  const wrap = document.querySelector(selector);
-  if (!wrap || !Array.isArray(nameArray)) return;
-  wrap.innerHTML = "";
-  nameArray.forEach(name => {
-    const span = document.createElement("span");
-    // 首字符为英文判定en-firm，其余中文
-    const firstChar = name.trim().charAt(0);
-    const isEnglish = /[A-Za-z]/.test(firstChar);
-    span.className = isEnglish ? "en-firm" : "cn-firm";
-    span.textContent = name;
-    wrap.appendChild(span);
+    li.innerText = txt;
+    ul.appendChild(li);
   });
 }
 
-// 语言切换绑定（文字逻辑修正）
-function bindLangEvent() {
-  const btn = document.querySelector(".lang-switch");
-  btn.addEventListener("click", () => {
+// 语言切换绑定
+function bindLangSwitch() {
+  const btn = document.querySelector(".lang-toggle");
+  btn.onclick = () => {
     currentLang = currentLang === "zh" ? "en" : "zh";
     btn.innerText = currentLang === "zh" ? "ZH / EN" : "EN / ZH";
-    renderPage();
-  });
+    renderWholePage();
+  }
 }
 
-// 程序入口
-initLoadData();
+// 程序启动
+loadSourceData();
