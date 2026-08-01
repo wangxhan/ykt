@@ -10,7 +10,7 @@
       },
       "hero": {
         "title": "全球化多元私营控股集团",
-        "desc": "依托长期价值投资与全域品牌资产管理体系，布局文创产业、高原特色农业、人工智能健康设备三大长期赛道。"
+        "desc": "深耕文创产业、高原特色农业、人工智能健康设备三大核心长期赛道，依托资本赋能、资源整合与技术自研优势，打通国内运营与海外出海链路，稳步构建多元化、抗风险、可持续发展的集团产业布局体系。"
       }
     },
     "en": {
@@ -23,7 +23,7 @@
       },
       "hero": {
         "title": "Global Diversified Private Holding Group",
-        "desc": "Focus on long-term value investment & brand asset management, covering cultural creativity, plateau agriculture, AI medical hardware industries."
+        "desc": "We focus on three long-term core tracks including cultural & creative industry, characteristic plateau agriculture and AI healthcare devices. Relying on capital empowerment, resource integration and independent R&D, we connect domestic operation with overseas layout to form a diversified, risk-resistant and sustainable industrial system."
       }
     }
   },
@@ -100,14 +100,14 @@
         "groupTitle": "Empowerment Platform",
         "firmList": [
           {
-            "type": "cn",
+            "type": "en",
             "name": "Chuneng Youfang Investment Co., Ltd.",
-            "scope": "Industrial investment, equity investment, asset management, enterprise management consulting, investment & financing consulting"
+            "scope": "Industrial investment management, equity investment, asset management, enterprise management consulting, investment and financing advisory services"
           },
           {
-            "type": "cn",
+            "type": "en",
             "name": "Beijing Yiketang Culture & Technology Co., Ltd.",
-            "scope": "Group brand management, IP operation management, cultural project incubation, brand planning & visual design"
+            "scope": "Overall brand management, group IP operation management, cultural and creative project incubation, brand planning and visual design services"
           }
         ]
       },
@@ -115,14 +115,14 @@
         "groupTitle": "Cultural & Art Subsidiaries",
         "firmList": [
           {
-            "type": "cn",
+            "type": "en",
             "name": "Jiangsu Something Sweet Internet Art Technology Co., Ltd.",
-            "scope": "Digital artwork creation, online art platform operation, trendy derivative development, cultural tourism planning"
+            "scope": "Digital art creation, online art platform operation, trendy derivative design, cultural tourism scheme planning and implementation"
           },
           {
-            "type": "cn",
+            "type": "en",
             "name": "Beijing Something Sweet Technology Co., Ltd.",
-            "scope": "Cross-border cultural goods trading, exhibition organization, art copyright trading, new media content operation"
+            "scope": "Cross-border cultural and creative trade, domestic and overseas exhibition implementation, art copyright transaction, new media content operation"
           }
         ]
       },
@@ -130,9 +130,9 @@
         "groupTitle": "Plateau Eco-Agriculture Enterprise",
         "firmList": [
           {
-            "type": "cn",
+            "type": "en",
             "name": "Qinghai Nine-Color Highland Biotechnology Co., Ltd.",
-            "scope": "Highland agricultural processing, grain & meat packaging, domestic sales & cross-border agricultural product export"
+            "scope": "Processing of plateau agricultural and livestock products, packaging of grain, oil and meat products, online & offline agricultural product sales, cross-border food export filing"
           }
         ]
       },
@@ -140,24 +140,24 @@
         "groupTitle": "AI Medical & Health Technology",
         "firmList": [
           {
-            "type": "cn",
+            "type": "en",
             "name": "Shanghai Wise & Wellness Medical Technology Co., Ltd.",
-            "scope": "AI medical equipment R&D, medical device sales, health algorithm research, technical service for medical institutions"
+            "scope": "R&D of intelligent medical hardware, medical device sales, health algorithm development, supporting technical services for medical institutions"
           },
           {
-            "type": "cn",
+            "type": "en",
             "name": "Chengdu Wise & Wellness Technology Co., Ltd.",
-            "scope": "Intelligent equipment maintenance, digital health system construction, channel development & after-sales service in southwest China"
+            "scope": "Localized operation & maintenance of intelligent equipment, construction of digital health system, channel development and after-sales service in southwest China"
           }
         ]
       },
       {
-        "groupTitle": "Malaysia Overseas Entity",
+        "groupTitle": "Malaysia Overseas Wholly-owned Entity",
         "firmList": [
           {
             "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
-            "scope": "Local product distribution in Southeast Asia, local business coordination, halal certification service, regional warehousing & logistics management"
+            "scope": "Local commodity distribution in Southeast Asia, local business docking in Malaysia, halal certification supporting services, regional warehousing and logistics management"
           }
         ]
       }
@@ -181,15 +181,15 @@
     "en": [
       {
         "title": "Cultural Tourism & Trendy Art Business",
-        "desc": "Offline art exhibition, cultural tourism construction and digital IP development at home; realize cultural product export distribution via overseas subsidiaries."
+        "desc": "Deploy offline art exhibitions and cultural tourism projects as well as digital IP development domestically. Distribute cultural products overseas via overseas subsidiaries to build a two-way cultural circulation channel between China and Malaysia."
       },
       {
         "title": "Cross-border Trade of Highland Agricultural Products",
-        "desc": "Standardized processing based on Qinghai raw materials, supply domestic e-commerce channels, and complete customs clearance & local sales in Southeast Asia through Malaysian entity."
+        "desc": "Carry out standardized processing and packaging based on Qinghai raw materials for domestic e-commerce sales. Complete customs clearance and local distribution in Southeast Asia through the Malaysian entity."
       },
       {
-        "title": "R&D & Sales of AI Medical Hardware",
-        "desc": "Self-develop health monitoring equipment and algorithm system for domestic sales, and export intelligent medical equipment & technical solutions to Southeast Asian medical institutions."
+        "title": "R&D and Sales of AI Medical Hardware",
+        "desc": "Self-develop health monitoring hardware and supporting algorithm systems with domestic qualification filing and sales. Supply intelligent medical equipment and technical solutions to medical institutions across Southeast Asia."
       }
     ]
   },
@@ -201,14 +201,14 @@
       "中东阿联酋办事处：农产、文创、智能硬件的中东区域贸易拓展"
     ],
     "en": [
-      "China: Complete supply chain system covering sales, warehousing and distribution in major cities",
-      "Kuala Lumpur SEA: Local operation, goods distribution and business negotiation managed by YIKETANG SS SDN. BHD.",
-      "Paris Europe Office: EU brand promotion, international resource docking and overseas brand compliance management",
-      "UAE Middle East Office: Trade expansion of agricultural products, cultural goods and intelligent hardware in Middle East"
+      "Chinese Mainland: Build a complete supply chain system covering sales, warehousing and fulfillment in major first and second-tier cities",
+      "Kuala Lumpur, Southeast Asia: YIKETANG SS SDN. BHD. takes full charge of local operation, goods distribution and business negotiation",
+      "Paris Office, Europe: EU brand promotion, international resource coordination and overseas brand compliance management",
+      "UAE Office, Middle East: Trade expansion of agricultural products, cultural products and intelligent hardware in the Middle East market"
     ]
   },
   "vision": {
     "zh": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同、海外属地运营四大模块，以实体产品与自研技术作为出海核心载体，搭建抗风险能力充足的跨国产业集群。",
-    "en": "Adopt stable holding operation mode, uniformly manage capital, brand, industrial synergy and overseas localized operation, build a transnational industrial cluster with strong anti-risk capability relying on physical goods and self-developed technology."
+    "en": "Adopt a stable holding operation model to centrally manage four modules including capital, brand, industrial collaboration and overseas localized operation. Build a risk-resistant multinational industrial cluster supported by physical products and self-developed technologies for global expansion."
   }
 }
