@@ -30,13 +30,15 @@
   "companyData": {
     "zh": [
       {
-        "groupTitle": "资本投资平台",
+        "groupTitle": "赋能平台",
         "firmList": [
           {
+            "type": "cn",
             "name": "春能优方投资有限公司",
             "scope": "实业投资管理、股权投资、资产管理、企业管理咨询、投融资顾问服务"
           },
           {
+            "type": "cn",
             "name": "北京一颗糖文化科技有限公司",
             "scope": "品牌整体管理、集团IP统筹运营、文创项目孵化、品牌策划与视觉设计服务"
           }
@@ -46,10 +48,12 @@
         "groupTitle": "文创艺术板块企业",
         "firmList": [
           {
+            "type": "cn",
             "name": "江苏撒蜜之城网络艺术科技有限公司",
             "scope": "数字艺术创作、线上艺术平台运营、潮流衍生品设计、文旅方案策划执行"
           },
           {
+            "type": "cn",
             "name": "北京撒蜜之城科技有限公司",
             "scope": "跨境文创贸易、国内外展会落地执行、艺术版权交易、新媒体内容运营"
           }
@@ -59,6 +63,7 @@
         "groupTitle": "高原生态农业板块",
         "firmList": [
           {
+            "type": "cn",
             "name": "青海九色田野生物科技有限公司",
             "scope": "高原农牧产品加工、特色粮油与肉品分装、农产品线上线下销售、跨境食品出口报备"
           }
@@ -68,10 +73,12 @@
         "groupTitle": "AI医疗健康科技板块",
         "firmList": [
           {
+            "type": "cn",
             "name": "上海慧迩美医疗科技有限公司",
             "scope": "智能医疗硬件研发、医疗器械销售、健康算法开发、医疗机构配套技术服务"
           },
           {
+            "type": "cn",
             "name": "成都慧迩美科技有限公司",
             "scope": "智能设备本地化运维、健康数字化系统搭建、西南区域渠道拓展与售后支持"
           }
@@ -81,6 +88,7 @@
         "groupTitle": "马来西亚境外全资法人",
         "firmList": [
           {
+            "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
             "scope": "东南亚本土商品分销、马国本地商务对接、清真认证配套、区域仓储物流管理"
           }
@@ -89,13 +97,15 @@
     ],
     "en": [
       {
-        "groupTitle": "Capital Investment Platform",
+        "groupTitle": "Empowerment Platform",
         "firmList": [
           {
+            "type": "cn",
             "name": "Chuneng Youfang Investment Co., Ltd.",
             "scope": "Industrial investment, equity investment, asset management, enterprise management consulting, investment & financing consulting"
           },
           {
+            "type": "cn",
             "name": "Beijing Yiketang Culture & Technology Co., Ltd.",
             "scope": "Group brand management, IP operation management, cultural project incubation, brand planning & visual design"
           }
@@ -105,10 +115,12 @@
         "groupTitle": "Cultural & Art Subsidiaries",
         "firmList": [
           {
+            "type": "cn",
             "name": "Jiangsu Something Sweet Internet Art Technology Co., Ltd.",
             "scope": "Digital artwork creation, online art platform operation, trendy derivative development, cultural tourism planning"
           },
           {
+            "type": "cn",
             "name": "Beijing Something Sweet Technology Co., Ltd.",
             "scope": "Cross-border cultural goods trading, exhibition organization, art copyright trading, new media content operation"
           }
@@ -118,6 +130,7 @@
         "groupTitle": "Plateau Eco-Agriculture Enterprise",
         "firmList": [
           {
+            "type": "cn",
             "name": "Qinghai Nine-Color Highland Biotechnology Co., Ltd.",
             "scope": "Highland agricultural processing, grain & meat packaging, domestic sales & cross-border agricultural product export"
           }
@@ -127,10 +140,12 @@
         "groupTitle": "AI Medical & Health Technology",
         "firmList": [
           {
+            "type": "cn",
             "name": "Shanghai Wise & Wellness Medical Technology Co., Ltd.",
             "scope": "AI medical equipment R&D, medical device sales, health algorithm research, technical service for medical institutions"
           },
           {
+            "type": "cn",
             "name": "Chengdu Wise & Wellness Technology Co., Ltd.",
             "scope": "Intelligent equipment maintenance, digital health system construction, channel development & after-sales service in southwest China"
           }
@@ -140,6 +155,7 @@
         "groupTitle": "Malaysia Overseas Entity",
         "firmList": [
           {
+            "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
             "scope": "Local product distribution in Southeast Asia, local business coordination, halal certification service, regional warehousing & logistics management"
           }
@@ -151,7 +167,7 @@
     "zh": [
       {
         "title": "文创文旅与潮流艺术业务",
-        "desc":  "布局国内线下艺术展、文旅项目落地、数字IP开发，同时依托海外子公司完成文创产品出海分销，打通中马双向文创流通链路。"
+        "desc": "布局国内线下艺术展、文旅项目落地、数字IP开发，同时依托海外子公司完成文创产品出海分销，打通中马双向文创流通链路。"
       },
       {
         "title": "高原特色农产品跨境贸易",
