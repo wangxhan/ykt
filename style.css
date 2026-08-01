@@ -1,179 +1,171 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    background-color: #f3f1ec;
-    color: #262626;
-    line-height: 1.9;
-    padding: 64px 40px;
-    font-size: 16px;
+  background-color: #f3f1ec;
+  color: #444444;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
 }
 .container {
-    max-width: 1180px;
-    margin: 0 auto;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.block {
+  padding: 60px 0;
 }
 
-.lang-btn-group {
-    text-align: right;
-    margin-bottom: 50px;
+/* 导航栏 */
+.header {
+  padding: 40px 0 20px;
+  border-bottom: 1px solid #b8b0a1;
 }
-.lang-btn-group button {
-    padding: 9px 24px;
-    background: transparent;
-    border: 1px solid #80786b;
-    color: #333;
-    font-size: 15px;
-    letter-spacing: 0.4px;
-    cursor: pointer;
-    margin-left: 12px;
-    transition: 0.3s ease;
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.lang-btn-group button:hover {
-    background-color: #3c362d;
-    color: #ffffff;
-    border-color: #3c362d;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #b8b0a1;
-    margin-bottom: 45px;
-}
-/* 导航栏主集团名称（独立最高层级样式，固定不变） */
 .nav-brand {
-    font-family: "Times New Roman", Georgia, serif;
-    font-size: 34px;
-    font-weight: 700;
-    color: #482e10;
-    letter-spacing: 1.6px;
-    text-decoration: none;
-    cursor: pointer;
-    padding-right: 45px;
-    border-right: 1px solid #b8b0a1;
-    line-height: 1.1;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #402818;
+  letter-spacing: 1.6px;
+  padding-right: 45px;
+  border-right: 1px solid #b8b0a1;
+}
+.nav-menu {
+  display: flex;
+  gap: 48px;
 }
 .nav-item {
-    font-size: 19px;
-    color: #333333;
-    text-decoration: none;
-    letter-spacing: 0.3px;
-    padding: 6px 10px;
-    position: relative;
-    cursor: pointer;
-    transition: color 0.3s;
+  color: #333;
+  text-decoration: none;
+  font-size: 19px;
+  font-family: "Times New Roman", serif;
+  position: relative;
 }
 .nav-item::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #8c6d31;
-    transition: width 0.3s ease;
-}
-.nav-item:hover {
-    color: #8c6d31;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #8c6d31;
+  transition: 0.3s ease;
 }
 .nav-item:hover::after {
-    width: calc(100% - 20px);
+  width: 100%;
+}
+.lang-switch {
+  border: 1px solid #80786b;
+  background: transparent;
+  color: #333;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Times New Roman", serif;
+}
+.lang-switch:hover {
+  background: #3c362d;
+  color: #fff;
 }
 
-.block {
-    background-color: #ffffff;
-    padding: 40px 48px;
-    border-radius: 2px;
-    box-shadow: 0 2px 12px rgba(60, 54, 45, 0.07);
-    margin-bottom: 36px;
+/* 通用标题样式 */
+.sec-title {
+  font-family: "Times New Roman", serif;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 24px;
+  font-weight: normal;
+  letter-spacing: 0.7px;
 }
-.banner-block {
-    background-color: #f9f7f2;
-    border-top: 4px solid #8c6d31;
+.group-subtitle {
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  color: #3c362d;
+  margin: 32px 0 12px;
+  padding-left: 10px;
+  border-left: 3px solid #8c6d31;
+}
+.hero-title {
+  font-family: "Times New Roman", serif;
+  font-size: 38px;
+  color: #222;
+  margin-bottom: 16px;
+}
+.hero-desc, .platform-desc, .vision-text {
+  color: #555;
+  font-size: 16px;
+  text-indent: 2em;
+  margin-bottom: 20px;
 }
 
-h2 {
-    font-family: "Times New Roman", serif;
-    font-size: 32px;
-    color: #1f1f1f;
-    margin-bottom: 18px;
-    font-weight: normal;
-    letter-spacing: 0.7px;
+/* 公司列表容器：独占一行排版 */
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-h3 {
-    font-family: "Times New Roman", serif;
-    font-size: 24px;
-    color: #3c362d;
-    margin-bottom: 20px;
-    padding-left: 12px;
-    border-left: 3px solid #8c6d31;
-    font-weight: normal;
+/* 中文公司样式 老钱深红棕 */
+.cn-firm {
+  font-family: SimSun, serif !important;
+  color: #402818 !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+  letter-spacing: 0.6px;
+  padding: 6px 10px;
+  background-color: rgba(140, 109, 49, 0.06);
+  width: fit-content;
 }
-h4 {
-    font-size: 20px;
-    color: #333;
-    margin: 16px 0 12px;
+/* 英文/海外公司 复古咖色 */
+.en-firm {
+  font-family: "Times New Roman", Georgia, serif !important;
+  color: #573f2e !important;
+  font-weight: 600 !important;
+  font-size: 17.5px !important;
+  letter-spacing: 0.8px;
+  padding: 6px 10px;
+  background-color: rgba(140, 109, 49, 0.06);
+  width: fit-content;
 }
-.text-desc {
-    color: #525252;
-    margin-bottom: 14px;
-    text-indent: 2em;
-    font-size: 16px;
+
+/* 业务卡片 */
+#businessWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.biz-item {
-    margin-bottom: 30px;
-    padding: 20px 24px;
-    background-color: #f9f7f2;
-    border-left: 2px solid #c2b49c;
+.biz-card {
+  padding: 24px 28px;
+  background: #f9f7f2;
+  border-left: 2px solid #c2b49c;
 }
-.global-list {
-    padding-left: 32px;
+.biz-card h4 {
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  color: #3c362d;
+  margin-bottom: 10px;
 }
+/* 全球网络列表 */
 .global-list li {
-    margin: 14px 0;
-    color: #3a3a3a;
-    font-size: 16px;
+  margin: 14px 0;
+  padding-left: 14px;
+  color: #3a3a3a;
+  list-style: none;
+  position: relative;
 }
-
-/* ===================== 中文公司名称 专属样式 ===================== */
-/* 字体：宋体加粗 | 颜色：深红棕 | 字号大于正文 */
-p:has-text("一颗糖集团"),
-p:has-text("春能优方投资有限公司"),
-p:has-text("北京一颗糖文化科技有限公司"),
-p:has-text("江苏撒蜜之城网络艺术科技有限公司"),
-p:has-text("北京撒蜜之城科技有限公司"),
-p:has-text("青海九色田野生物科技有限公司"),
-p:has-text("上海慧迩美医疗科技有限公司"),
-p:has-text("成都慧迩美科技有限公司") {
-    font-family: SimSun, "宋体", serif !important;
-    color: #702828 !important;
-    font-weight: bold !important;
-    font-size: 18px !important;
-    letter-spacing: 0.6px !important;
-}
-
-/* ===================== 英文/境外公司名称 专属样式 ===================== */
-/* 字体：Times New Roman | 颜色：墨绿 | 字号区分中文公司 */
-p:has-text("YKT Group"),
-p:has-text("Chuneng Youfang Investment Co., Ltd."),
-p:has-text("Beijing Yiketang Culture & Technology Co., Ltd."),
-p:has-text("Jiangsu Something Sweet Internet Art Technology Co., Ltd."),
-p:has-text("Beijing Something Sweet Technology Co., Ltd."),
-p:has-text("Qinghai Nine-Color Highland Biotechnology Co., Ltd."),
-p:has-text("Shanghai Wise & Wellness Medical Technology Co., Ltd."),
-p:has-text("Chengdu Wise & Wellness Technology Co., Ltd."),
-p:has-text("YIKETANG SS SDN. BHD.") {
-    font-family: "Times New Roman", Georgia, serif !important;
-    color: #1f443b !important;
-    font-weight: 600 !important;
-    font-size: 17.5px !important;
-    letter-spacing: 0.8px !important;
+.global-list li::before {
+  content: "—";
+  color: #8c6d31;
+  position: absolute;
+  left: 0;
 }
