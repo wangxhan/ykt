@@ -19,7 +19,6 @@ body {
     margin: 0 auto;
 }
 
-/* 语言切换按钮 */
 .lang-btn-group {
     text-align: right;
     margin-bottom: 50px;
@@ -41,7 +40,6 @@ body {
     border-color: #3c362d;
 }
 
-/* 导航容器 */
 .nav-bar {
     display: flex;
     align-items: center;
@@ -50,7 +48,7 @@ body {
     border-bottom: 1px solid #b8b0a1;
     margin-bottom: 45px;
 }
-/* 顶部集团名称（最高视觉层级，老钱衬线字体） */
+/* 导航栏主集团名称（独立最高层级样式，固定不变） */
 .nav-brand {
     font-family: "Times New Roman", Georgia, serif;
     font-size: 34px;
@@ -63,7 +61,6 @@ body {
     border-right: 1px solid #b8b0a1;
     line-height: 1.1;
 }
-/* 导航普通菜单 */
 .nav-item {
     font-size: 19px;
     color: #333333;
@@ -91,7 +88,6 @@ body {
     width: calc(100% - 20px);
 }
 
-/* 卡片通用样式 老钱极简卡片质感 */
 .block {
     background-color: #ffffff;
     padding: 40px 48px;
@@ -104,7 +100,6 @@ body {
     border-top: 4px solid #8c6d31;
 }
 
-/* 标题层级衬线字体统一欧式风格 */
 h2 {
     font-family: "Times New Roman", serif;
     font-size: 32px;
@@ -127,7 +122,6 @@ h4 {
     color: #333;
     margin: 16px 0 12px;
 }
-/* 普通正文 弱化灰色 */
 .text-desc {
     color: #525252;
     margin-bottom: 14px;
@@ -149,31 +143,37 @@ h4 {
     font-size: 16px;
 }
 
-/* ========= 全部集团&子公司名称统一高亮强化（全覆盖所有名称） ========= */
-/* 中文公司名称匹配强化样式 */
-.text-desc:has(:contains("一颗糖集团")),
-h4:contains("春能优方投资有限公司"),
-h4:contains("北京一颗糖文化科技有限公司"),
-.text-desc:contains("江苏撒蜜之城网络艺术科技有限公司"),
-.text-desc:contains("北京撒蜜之城科技有限公司"),
-.text-desc:contains("青海九色田野生物科技有限公司"),
-.text-desc:contains("上海慧迩美医疗科技有限公司"),
-.text-desc:contains("成都慧迩美科技有限公司"),
-.global-list li:contains("YIKETANG SS SDN. BHD."),
-/* 英文公司名称匹配强化样式 */
-.text-desc:contains("YKT Group"),
-h4:contains("Chuneng Youfang Investment Co., Ltd."),
-h4:contains("Beijing Yiketang Culture & Technology Co., Ltd."),
-.text-desc:contains("Jiangsu Something Sweet Internet Art Technology Co., Ltd."),
-.text-desc:contains("Beijing Something Sweet Technology Co., Ltd."),
-.text-desc:contains("Qinghai Nine-Color Highland Biotechnology Co., Ltd."),
-.text-desc:contains("Shanghai Wise & Wellness Medical Technology Co., Ltd."),
-.text-desc:contains("Chengdu Wise & Wellness Technology Co., Ltd.") {
-    font-family: "Times New Roman", SimSun, Georgia, serif !important;
-    color: #482e10 !important;
-    font-weight: 800 !important;
-    font-size: 18.5px !important;
+/* ===================== 中文公司名称 专属样式 ===================== */
+/* 字体：宋体加粗 | 颜色：深红棕 | 字号大于正文 */
+p:has-text("一颗糖集团"),
+p:has-text("春能优方投资有限公司"),
+p:has-text("北京一颗糖文化科技有限公司"),
+p:has-text("江苏撒蜜之城网络艺术科技有限公司"),
+p:has-text("北京撒蜜之城科技有限公司"),
+p:has-text("青海九色田野生物科技有限公司"),
+p:has-text("上海慧迩美医疗科技有限公司"),
+p:has-text("成都慧迩美科技有限公司") {
+    font-family: SimSun, "宋体", serif !important;
+    color: #702828 !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    letter-spacing: 0.6px !important;
+}
+
+/* ===================== 英文/境外公司名称 专属样式 ===================== */
+/* 字体：Times New Roman | 颜色：墨绿 | 字号区分中文公司 */
+p:has-text("YKT Group"),
+p:has-text("Chuneng Youfang Investment Co., Ltd."),
+p:has-text("Beijing Yiketang Culture & Technology Co., Ltd."),
+p:has-text("Jiangsu Something Sweet Internet Art Technology Co., Ltd."),
+p:has-text("Beijing Something Sweet Technology Co., Ltd."),
+p:has-text("Qinghai Nine-Color Highland Biotechnology Co., Ltd."),
+p:has-text("Shanghai Wise & Wellness Medical Technology Co., Ltd."),
+p:has-text("Chengdu Wise & Wellness Technology Co., Ltd."),
+p:has-text("YIKETANG SS SDN. BHD.") {
+    font-family: "Times New Roman", Georgia, serif !important;
+    color: #1f443b !important;
+    font-weight: 600 !important;
+    font-size: 17.5px !important;
     letter-spacing: 0.8px !important;
-    padding-bottom: 2px;
-    border-bottom: 1px solid #d4bc9c;
 }
