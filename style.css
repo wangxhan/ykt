@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: #f3f1ec;
+    color: #262626;
+    line-height: 1.9;
+    padding: 64px 40px;
+    font-size: 16px;
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* 语言切换按钮 */
+.lang-btn-group {
+    text-align: right;
+    margin-bottom: 50px;
+}
+.lang-btn-group button {
+    padding: 9px 24px;
+    background: transparent;
+    border: 1px solid #80786b;
+    color: #333;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: 0.3s ease;
+}
+.lang-btn-group button:hover {
+    background-color: #3c362d;
+    color: #ffffff;
+    border-color: #3c362d;
+}
+
+/* 导航容器 */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #b8b0a1;
+    margin-bottom: 45px;
+}
+/* 顶部集团名称（最高视觉层级，老钱衬线字体） */
+.nav-brand {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #482e10;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 45px;
+    border-right: 1px solid #b8b0a1;
+    line-height: 1.1;
+}
+/* 导航普通菜单 */
+.nav-item {
+    font-size: 19px;
+    color: #333333;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    padding: 6px 10px;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8c6d31;
+    transition: width 0.3s ease;
+}
+.nav-item:hover {
+    color: #8c6d31;
+}
+.nav-item:hover::after {
+    width: calc(100% - 20px);
+}
+
+/* 卡片通用样式 老钱极简卡片质感 */
+.block {
+    background-color: #ffffff;
+    padding: 40px 48px;
+    border-radius: 2px;
+    box-shadow: 0 2px 12px rgba(60, 54, 45, 0.07);
+    margin-bottom: 36px;
+}
+.banner-block {
+    background-color: #f9f7f2;
+    border-top: 4px solid #8c6d31;
+}
+
+/* 标题层级衬线字体统一欧式风格 */
+h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    color: #1f1f1f;
+    margin-bottom: 18px;
+    font-weight: normal;
+    letter-spacing: 0.7px;
+}
+h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    color: #3c362d;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 3px solid #8c6d31;
+    font-weight: normal;
+}
+h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 16px 0 12px;
+}
+/* 普通正文 弱化灰色 */
+.text-desc {
+    color: #525252;
+    margin-bottom: 14px;
+    text-indent: 2em;
+    font-size: 16px;
+}
+.biz-item {
+    margin-bottom: 30px;
+    padding: 20px 24px;
+    background-color: #f9f7f2;
+    border-left: 2px solid #c2b49c;
+}
+.global-list {
+    padding-left: 32px;
+}
+.global-list li {
+    margin: 14px 0;
+    color: #3a3a3a;
+    font-size: 16px;
+}
+
+/* ========= 全部集团&子公司名称统一高亮强化（全覆盖所有名称） ========= */
+/* 中文公司名称匹配强化样式 */
+.text-desc:has(:contains("一颗糖集团")),
+h4:contains("春能优方投资有限公司"),
+h4:contains("北京一颗糖文化科技有限公司"),
+.text-desc:contains("江苏撒蜜之城网络艺术科技有限公司"),
+.text-desc:contains("北京撒蜜之城科技有限公司"),
+.text-desc:contains("青海九色田野生物科技有限公司"),
+.text-desc:contains("上海慧迩美医疗科技有限公司"),
+.text-desc:contains("成都慧迩美科技有限公司"),
+.global-list li:contains("YIKETANG SS SDN. BHD."),
+/* 英文公司名称匹配强化样式 */
+.text-desc:contains("YKT Group"),
+h4:contains("Chuneng Youfang Investment Co., Ltd."),
+h4:contains("Beijing Yiketang Culture & Technology Co., Ltd."),
+.text-desc:contains("Jiangsu Something Sweet Internet Art Technology Co., Ltd."),
+.text-desc:contains("Beijing Something Sweet Technology Co., Ltd."),
+.text-desc:contains("Qinghai Nine-Color Highland Biotechnology Co., Ltd."),
+.text-desc:contains("Shanghai Wise & Wellness Medical Technology Co., Ltd."),
+.text-desc:contains("Chengdu Wise & Wellness Technology Co., Ltd.") {
+    font-family: "Times New Roman", SimSun, Georgia, serif !important;
+    color: #482e10 !important;
+    font-weight: 800 !important;
+    font-size: 18.5px !important;
+    letter-spacing: 0.8px !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #d4bc9c;
+}

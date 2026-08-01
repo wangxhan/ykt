@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一颗糖集团 | Global Holding Group</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lang-btn-group">
+            <button id="zhBtn">中文</button>
+            <button id="enBtn">English</button>
+        </div>
+
+        <!-- 导航栏 锚点对应页面区块 -->
+        <nav class="nav-bar">
+            <a href="#top" class="nav-brand" data-bind="navBrand"></a>
+            <a href="#about" class="nav-item" data-bind="navAbout"></a>
+            <a href="#business" class="nav-item" data-bind="navBusiness"></a>
+            <a href="#global" class="nav-item" data-bind="navGlobal"></a>
+            <a href="#vision" class="nav-item" data-bind="navVision"></a>
+        </nav>
+
+        <!-- 头部横幅 -->
+        <section id="top" class="block banner-block">
+            <h2 data-bind="heroTitle"></h2>
+            <p class="text-desc" data-bind="heroDesc"></p>
+        </section>
+
+        <!-- 集团概况 -->
+        <section id="about" class="block">
+            <h3 data-bind="platformTitle"></h3>
+            <div class="biz-item">
+                <h4 data-bind="plat1Name"></h4>
+                <p class="text-desc" data-bind="plat1Desc"></p>
+            </div>
+            <div class="biz-item">
+                <h4 data-bind="plat2Name"></h4>
+                <p class="text-desc" data-bind="plat2Desc"></p>
+            </div>
+        </section>
+
+        <!-- 核心业务板块 -->
+        <section id="business" class="block">
+            <h3 data-bind="bizHead"></h3>
+            <div class="biz-item">
+                <h4 data-bind="biz1Title"></h4>
+                <p class="text-desc" data-bind="biz1Intro"></p>
+                <p class="text-desc" data-bind="biz1Core"></p>
+            </div>
+            <div class="biz-item">
+                <h4 data-bind="biz2Title"></h4>
+                <p class="text-desc" data-bind="biz2Core"></p>
+            </div>
+            <div class="biz-item">
+                <h4 data-bind="biz3Title"></h4>
+                <p class="text-desc" data-bind="biz3Core"></p>
+            </div>
+        </section>
+
+        <!-- 全球网络 -->
+        <section id="global" class="block">
+            <h3 data-bind="globalHead"></h3>
+            <ul class="global-list" id="globalList"></ul>
+        </section>
+
+        <!-- 发展理念 -->
+        <section id="vision" class="block">
+            <h3 data-bind="visionHead"></h3>
+            <p class="text-desc" data-bind="visionText"></p>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
