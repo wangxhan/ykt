@@ -1,91 +1,209 @@
+/* 全局重置 & 基础老钱底色 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f3f1ec;
+  color: #424242;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
 }
 .container {
-  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 50px;
 }
+.section-wrap {
+  padding: 70px 0;
+}
+.bg-light {
+  background-color: #f9f7f2;
+}
+
+/* 顶部导航 */
 .site-header {
-  padding: 16px 0;
-  border-bottom: 1px solid #eee;
+  padding: 40px 0 24px;
+  border-bottom: 1px solid #b8b0a1;
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
 }
 .header-brand {
-  font-size: 22px;
-  font-weight: bold;
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #402818;
+  letter-spacing: 1.8px;
+  padding-right: 50px;
+  border-right: 1px solid #b8b0a1;
 }
 .header-nav {
   display: flex;
-  gap: 28px;
+  gap: 52px;
 }
 .nav-item {
+  font-family: "Times New Roman", serif;
+  font-size: 19px;
   color: #333;
   text-decoration: none;
+  position: relative;
+}
+.nav-item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #8c6d31;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.nav-item:hover::after {
+  width: 100%;
 }
 .lang-toggle {
-  padding: 6px 14px;
-  border: 1px solid #333;
-  background: #fff;
-  border-radius: 4px;
+  border: 1px solid #82796b;
+  background: transparent;
+  padding: 9px 24px;
+  font-family: "Times New Roman", serif;
   cursor: pointer;
+  color: #333;
+  transition: 0.3s;
 }
+.lang-toggle:hover {
+  background-color: #3c362d;
+  color: #fff;
+  border-color: #3c362d;
+}
+
+/* 首页横幅 */
 .hero-banner {
   padding: 60px 0;
   text-align: center;
-  background: #f7f8fa;
 }
 .hero-title {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-.section-wrap {
-  padding: 50px 0;
-}
-.bg-light {
-  background-color: #f7f8fa;
-}
-.section-main-title {
-  font-size: 24px;
-  margin-bottom: 24px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #444;
-}
-.group-block {
-  margin-bottom: 26px;
-}
-.group-block h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-family: "Times New Roman", serif;
+  font-size: 40px;
   color: #222;
+  margin-bottom: 18px;
 }
-.firm-card {
-  padding: 12px 16px;
-  background: #fff;
-  border-radius: 6px;
-  margin-bottom: 8px;
+.hero-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 17px;
 }
-.firm-name {
+
+/* 通用大标题 */
+.section-main-title {
+  font-family: "Times New Roman", serif;
+  font-size: 33px;
+  color: #2c2116;
+  margin-bottom: 45px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d4cbbc;
+}
+
+/* ========== 公司区块样式【核心：名称一行，经营范围紧跟下一行】 ========== */
+.firm-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+/* 每个业务板块大分组 */
+.firm-group-block {
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #d1c8b8;
+}
+.firm-group-title {
+  font-family: "Times New Roman", serif;
+  font-size: 23px;
+  color: #473524;
+  margin-bottom: 22px;
+  padding-left: 12px;
+  border-left: 3px solid #8c6d31;
+}
+/* 单家公司容器 */
+.single-firm-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+/* 中文公司名称样式 */
+.cn-firm-name {
+  font-family: SimSun, serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: #402818;
+  letter-spacing: 0.7px;
+  display: block;
+}
+/* 外文公司名称样式 */
+.en-firm-name {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 4px;
+  color: #573f2e;
+  letter-spacing: 0.9px;
+  display: block;
 }
-.global-list {
-  padding-left: 20px;
-  line-height: 1.8;
+/* 经营范围：名称下一行，缩进弱化显示 */
+.firm-scope-text {
+  color: #545454;
+  font-size: 15.5px;
+  padding-left: 14px;
+  margin-top: 4px;
+  line-height: 1.75;
 }
-.biz-item {
-  margin-bottom: 16px;
-  line-height: 1.7;
+
+/* 集团总业务卡片 */
+.biz-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
+.biz-card {
+  padding: 28px 32px;
+  background-color: #fff;
+  border-left: 3px solid #8c6d31;
+  box-shadow: 0 1px 8px rgba(80,65,40,0.05);
+}
+.biz-card h4 {
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  color: #3c362d;
+  margin-bottom: 10px;
+}
+.biz-card p {
+  color: #505050;
+}
+
+/* 全球网络列表 */
+.global-list li {
+  list-style: none;
+  margin: 18px 0;
+  padding-left: 16px;
+  position: relative;
+  color: #3a3a3a;
+}
+.global-list li::before {
+  content: "—";
+  color: #8c6d31;
+  position: absolute;
+  left: 0;
+}
+
+/* 底部理念文本 */
 .vision-text {
-  line-height: 1.8;
-  font-size: 15px;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.9;
+  text-indent: 2em;
 }
