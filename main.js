@@ -1,123 +1,283 @@
-let siteData = null;
-let currentLang = "zh";
-
-// 加载JSON数据
-async function loadSourceData() {
-  try {
-    const res = await fetch("./data.json");
-    if (!res.ok) throw new Error("JSON文件读取失败，请使用Live Server运行");
-    siteData = await res.json();
-    renderWholePage();
-    bindLangSwitch();
-    console.log("页面渲染正常，无报错");
-  } catch (error) {
-    console.error("运行错误：", error);
-    alert("禁止直接双击HTML打开文件，请使用VSCode Live Server启动预览");
+// 读取上方全部json数据
+const siteData = {
+  "globalText": {
+    "中文": {
+      "nav": {
+        "brand": "一颗糖集团",
+        "about": "集团主体名录",
+        "business": "集团整体业务",
+        "globalNet": "全球网络",
+        "vision": "发展理念"
+      },
+      "hero": {
+        "title": "全球化多元私营控股集团",
+        "desc": "深耕文创产业、高原特色农业、人工智能健康设备三大核心长期赛道，依托资本赋能、资源整合与技术自研优势，打通国内运营与海外出海链路，稳步构建多元化、抗风险、可持续发展的集团产业布局体系。"
+      },
+      "titles": {
+        "firmTitle": "集团旗下法人主体",
+        "bizTitle": "集团整体三大业务体系",
+        "netTitle": "全球运营布局网络",
+        "visionTitle": "长期发展理念"
+      }
+    },
+    "英文": {
+      "nav": {
+        "brand": "YKT Group",
+        "about": "Group Entities",
+        "business": "Group Business",
+        "globalNet": "Global Network",
+        "vision": "Corporate Vision"
+      },
+      "hero": {
+        "title": "Global Diversified Private Holding Group",
+        "desc": "We focus on three long-term core tracks including cultural & creative industry, characteristic plateau agriculture and AI healthcare devices. Relying on capital empowerment, resource integration and independent R&D, we connect domestic operation with overseas layout to form a diversified, risk-resistant and sustainable industrial system."
+      },
+      "titles": {
+        "firmTitle": "Group Legal Entities",
+        "bizTitle": "Three Major Group Business Systems",
+        "netTitle": "Global Operation Layout Network",
+        "visionTitle": "Long-term Development Vision"
+      }
+    }
+  },
+  "companyData": {
+    "中文": [
+      {
+        "groupTitle": "赋能平台",
+        "firmList": [
+          {
+            "name": "春能优方投资有限公司",
+            "scope": "实业投资管理、股权投资、资产管理、企业管理咨询、投融资顾问服务"
+          },
+          {
+            "name": "北京一颗糖文化科技有限公司",
+            "scope": "品牌整体运营、集团IP统筹运营、文创项目孵化、品牌策划与视觉设计服务"
+          }
+        ]
+      },
+      {
+        "groupTitle": "文创艺术板块企业",
+        "firmList": [
+          {
+            "name": "江苏撒蜜之城网络艺术科技有限公司",
+            "scope": "数字艺术创作、线上平台运营、潮流衍生品设计、文旅方案策划落地执行"
+          },
+          {
+            "name": "北京撒蜜之城科技有限公司",
+            "scope": "跨境文创贸易、海内外展会承办、艺术版权交易、新媒体内容运营"
+          }
+        ]
+      },
+      {
+        "groupTitle": "高原生态农业板块",
+        "firmList": [
+          {
+            "name": "青海九色原野生物科技有限公司",
+            "scope": "高原农牧产品加工、粮油肉制品分装、农产品线上线下销售、跨境食品出口报备"
+          }
+        ]
+      },
+      {
+        "groupTitle": "AI医疗健康科技板块",
+        "firmList": [
+          {
+            "name": "上海慧尔美医疗科技有限公司",
+            "scope": "智能医疗硬件研发、医疗器械销售、健康算法开发、医疗机构配套技术服务"
+          },
+          {
+            "name": "成都慧尔美科技有限公司",
+            "scope": "智能设备本地化运维、健康数字化平台搭建、西南区域渠道拓展与售后支持"
+          }
+        ]
+      },
+      {
+        "groupTitle": "马来西亚境外全资主体",
+        "firmList": [
+          {
+            "name": "YIKETANG SS SDN. BHD.",
+            "scope": "东南亚本地商品分销、马来西亚本地商务对接、清真认证配套服务、区域仓储物流管理"
+          }
+        ]
+      }
+    ],
+    "英文": [
+      {
+        "groupTitle": "Empowerment Platform",
+        "firmList": [
+          {
+            "name": "Chuneng Youfang Investment Co., Ltd.",
+            "scope": "Industrial investment management, equity investment, asset management, enterprise management consulting, investment and financing advisory services"
+          },
+          {
+            "name": "Beijing Yiketang Culture Technology Co., Ltd.",
+            "scope": "Overall brand operation, group IP management, cultural and creative project incubation, brand planning and visual design services"
+          }
+        ]
+      },
+      {
+        "groupTitle": "Cultural & Art Subsidiaries",
+        "firmList": [
+          {
+            "name": "Jiangsu Samicheng Network Art Technology Co., Ltd.",
+            "scope": "Digital art creation, online platform operation, trendy derivative design, cultural tourism scheme planning and implementation"
+          },
+          {
+            "name": "Beijing Samicheng Technology Co., Ltd.",
+            "scope": "Cross-border cultural trade, exhibition organization at home and abroad, art copyright trading, new media content operation"
+          }
+        ]
+      },
+      {
+        "groupTitle": "Plateau Eco-agriculture Division",
+        "firmList": [
+          {
+            "name": "Qinghai Jiuse Yuanye Biotechnology Co., Ltd.",
+            "scope": "Processing of plateau agricultural and livestock products, packaging of grain, oil and meat products, domestic sales, filing for cross-border food export"
+          }
+        ]
+      },
+      {
+        "groupTitle": "AI Medical & Health Technology Division",
+        "firmList": [
+          {
+            "name": "Shanghai Huiermei Medical Technology Co., Ltd.",
+            "scope": "R&D of intelligent medical equipment, medical device sales, health algorithm development, supporting technical services for medical institutions"
+          },
+          {
+            "name": "Chengdu Huiermei Technology Co., Ltd.",
+            "scope": "Local operation & maintenance of intelligent equipment, construction of health digital system, channel development & after-sales service in southwest China"
+          }
+        ]
+      },
+      {
+        "groupTitle": "Wholly-owned Entity in Malaysia",
+        "firmList": [
+          {
+            "name": "YIKETANG SS SDN. BHD.",
+            "scope": "Local goods distribution across Southeast Asia, local business communication in Malaysia, halal certification supporting service, regional warehousing and logistics administration"
+          }
+        ]
+      }
+    ]
+  },
+  "businessTotal": {
+    "中文": [
+      {
+        "title": "文创文旅与潮流艺术业务",
+        "desc": "布局国内线下艺术展会、文旅项目落地、数字IP开发，依托海外子公司完成文创产品出海分销，搭建中马双向文创流通渠道。"
+      },
+      {
+        "title": "高原特色农产品跨境贸易",
+        "desc": "依托青海原产地资源完成标准化加工封装，面向东南亚市场完成清关、认证、经销全链路，由马来西亚公司负责本地铺货与经销。"
+      },
+      {
+        "title": "AI医疗硬件研发与销售",
+        "desc": "自主研发智能健康监测硬件，完成国内资质备案销售，同步对接东南亚医疗机构，输出硬件产品与配套数字化管理方案。"
+      }
+    ],
+    "英文": [
+      {
+        "title": "Cultural Tourism & Trendy Art Business",
+        "desc": "Deploy offline art exhibitions and cultural tourism projects in China, develop digital IP. Rely on overseas subsidiaries to distribute cultural products overseas and build a two-way cultural exchange channel between China and Malaysia."
+      },
+      {
+        "title": "Cross-border Trade of Plateau Featured Agricultural Products",
+        "desc": "Complete standardized processing and packaging based on Qinghai local resources. Handle customs clearance, certification and distribution for Southeast Asia markets, with the Malaysian entity responsible for local sales."
+      },
+      {
+        "title": "R&D and Sales of AI Medical Hardware",
+        "desc": "Independently develop intelligent health monitoring devices with domestic registration and sales, supply hardware and supporting digital management solutions for medical institutions in Southeast Asia."
+      }
+    ]
+  },
+  "globalNetwork": {
+    "中文": [
+      "中国大陆：搭建覆盖全国的销售、仓储、履约整套供应链体系",
+      "马来西亚吉隆坡：集团东南亚总部，负责整个东盟市场商务对接与本地化运营",
+      "法国巴黎：欧洲艺术交流据点，开展艺术品合作、展会参展、品牌曝光推广",
+      "阿联酋迪拜：中东区域贸易窗口，负责农产品、医疗产品中东地区渠道拓展"
+    ],
+    "英文": [
+      "Chinese Mainland: Build a full supply chain system including nationwide sales, warehousing and fulfillment",
+      "Kuala Lumpur, Malaysia: Southeast Asia headquarters for ASEAN business negotiation and local operation",
+      "Paris, France: European art exchange hub for artwork cooperation, exhibition participation and brand promotion",
+      "Dubai, UAE: Middle East trade hub for channel expansion of agricultural and medical products"
+    ]
+  },
+  "vision": {
+    "中文": "坚持稳健的集团控股运营模式，统筹文创、农业、医疗三大实体产业出海发展，以实体业务为根基，依托中马一带一路合作区位优势，打造国际化、合规化、长效化的跨国实业集团。",
+    "英文": "Adopt stable holding operation mode to promote overseas development of cultural creativity, agriculture and medical industries. Based on physical businesses and the China-Malaysia Belt and Road advantages, build an international, compliant and long-term transnational industrial group."
   }
-}
+};
 
-// 整页统一渲染入口
-function renderWholePage() {
-  const langKey = currentLang;
-  const textData = siteData.globalText[langKey];
-  const companyList = siteData.companyData[langKey];
-  const totalBiz = siteData.businessTotal[langKey];
-  const globalNet = siteData.globalNetwork[langKey];
-  const visionTxt = siteData.vision[langKey];
+// 默认初始语言
+let currentLang = "中文";
+const langBtn = document.getElementById("langBtn");
 
-  // 导航文字赋值
-  document.getElementById("navBrand").innerText = textData.nav.brand;
-  document.querySelector('[data-key="about"]').innerText = textData.nav.about;
-  document.querySelector('[data-key="business"]').innerText = textData.nav.business;
-  document.querySelector('[data-key="globalNet"]').innerText = textData.nav.globalNet;
-  document.querySelector('[data-key="vision"]').innerText = textData.nav.vision;
+// 页面渲染总函数
+function renderPage(lang) {
+  const langData = siteData.globalText[lang];
+  document.documentElement.lang = lang === "中文" ? "zh-CN" : "en";
+
+  // 顶部品牌
+  document.getElementById("navBrand").innerText = langData.nav.brand;
+
+  // 导航栏渲染
+  document.querySelectorAll(".nav-item").forEach(item => {
+    const key = item.dataset.key;
+    item.innerText = langData.nav[key];
+  });
+
+  // 板块大标题（和导航同一套写法）
+  document.querySelectorAll("[data-key]").forEach(el => {
+    const key = el.dataset.key;
+    if (langData.titles && langData.titles[key]) {
+      el.innerText = langData.titles[key];
+    }
+  });
 
   // 头部横幅
-  document.querySelector(".hero-title").innerText = textData.hero.title;
-  document.querySelector(".hero-desc").innerText = textData.hero.desc;
+  document.querySelector(".hero-title").innerText = langData.hero.title;
+  document.querySelector(".hero-desc").innerText = langData.hero.desc;
 
-  // 渲染公司列表（名称一行，经营范围下一行）
-  renderAllCompanies(companyList);
-  // 渲染集团总业务
-  renderTotalBusiness(totalBiz);
-  // 全球网点
-  renderGlobalNet(globalNet);
-  // 发展理念
-  document.querySelector(".vision-text").innerText = visionTxt;
-}
-
-// 渲染公司区块
-function renderAllCompanies(groupArr) {
-  const container = document.getElementById("firmContainer");
-  container.innerHTML = "";
-
-  groupArr.forEach(groupItem => {
-    const groupWrap = document.createElement("div");
-    groupWrap.className = "firm-group-block";
-
-    // 板块大标题
-    const groupTitleDom = document.createElement("h3");
-    groupTitleDom.className = "firm-group-title";
-    groupTitleDom.innerText = groupItem.groupTitle;
-    groupWrap.appendChild(groupTitleDom);
-
-    // 遍历该板块内每一家公司
-    groupItem.firmList.forEach(firm => {
-      const itemDom = document.createElement("div");
-      itemDom.className = "single-firm-item";
-
-      // 公司名称DOM
-      const nameSpan = document.createElement("span");
-      const firstChar = firm.name.trim().charAt(0);
-      const isEng = /[A-Za-z]/.test(firstChar);
-      nameSpan.className = isEng ? "en-firm-name" : "cn-firm-name";
-      nameSpan.innerText = firm.name;
-
-      // 经营范围DOM
-      const scopeP = document.createElement("p");
-      scopeP.className = "firm-scope-text";
-      scopeP.innerText = firm.scope;
-
-      itemDom.appendChild(nameSpan);
-      itemDom.appendChild(scopeP);
-      groupWrap.appendChild(itemDom);
+  // 公司列表渲染
+  const firmBox = document.getElementById("firmContainer");
+  firmBox.innerHTML = "";
+  siteData.companyData[lang].forEach(group => {
+    let html = `<div class="group-block"><h3>${group.groupTitle}</h3>`;
+    group.firmList.forEach(firm => {
+      html += `<div class="firm-card"><div class="firm-name">${firm.name}</div><div class="firm-desc">${firm.scope}</div></div>`;
     });
-    container.appendChild(groupWrap);
+    html += "</div>";
+    firmBox.innerHTML += html;
   });
-}
 
-// 渲染集团整体业务
-function renderTotalBusiness(bizArr) {
-  const wrap = document.getElementById("bizContainer");
-  wrap.innerHTML = "";
-  bizArr.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "biz-card";
-    card.innerHTML = `<h4>${item.title}</h4><p>${item.desc}</p>`;
-    wrap.appendChild(card);
+  // 集团业务
+  const bizBox = document.getElementById("bizContainer");
+  bizBox.innerHTML = "";
+  siteData.businessTotal[lang].forEach(item => {
+    bizBox.innerHTML += `<div class="biz-item"><strong>${item.title}</strong><p>${item.desc}</p></div>`;
   });
-}
 
-// 渲染全球网络
-function renderGlobalNet(listArr) {
-  const ul = document.getElementById("globalList");
-  ul.innerHTML = "";
-  listArr.forEach(txt => {
-    const li = document.createElement("li");
-    li.innerText = txt;
-    ul.appendChild(li);
+  // 全球网点
+  const netBox = document.getElementById("globalList");
+  netBox.innerHTML = "";
+  siteData.globalNetwork[lang].forEach(text => {
+    netBox.innerHTML += `<li>${text}</li>`;
   });
+
+  // 发展理念
+  document.querySelector(".vision-text").innerText = siteData.vision[lang];
+
+  // 切换按钮文字
+  langBtn.innerText = lang === "中文" ? "中文 / EN" : "EN / 中文";
 }
 
-// 语言切换绑定
-function bindLangSwitch() {
-  const btn = document.querySelector(".lang-toggle");
-  btn.onclick = () => {
-    currentLang = currentLang === "zh" ? "en" : "zh";
-    btn.innerText = currentLang === "zh" ? "ZH / EN" : "EN / ZH";
-    renderWholePage();
-  }
-}
+// 初始化加载页面
+renderPage(currentLang);
 
-// 程序启动
-loadSourceData();
+// 切换按钮点击事件
+langBtn.addEventListener("click", () => {
+  currentLang = currentLang === "中文" ? "英文" : "中文";
+  renderPage(currentLang);
+});

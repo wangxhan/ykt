@@ -1,6 +1,6 @@
 {
   "globalText": {
-    "zh": {
+    "中文": {
       "nav": {
         "brand": "一颗糖集团",
         "about": "集团主体名录",
@@ -11,9 +11,15 @@
       "hero": {
         "title": "全球化多元私营控股集团",
         "desc": "深耕文创产业、高原特色农业、人工智能健康设备三大核心长期赛道，依托资本赋能、资源整合与技术自研优势，打通国内运营与海外出海链路，稳步构建多元化、抗风险、可持续发展的集团产业布局体系。"
+      },
+      "titles": {
+        "firmTitle": "集团旗下法人主体",
+        "bizTitle": "集团整体三大业务体系",
+        "netTitle": "全球运营布局网络",
+        "visionTitle": "长期发展理念"
       }
     },
-    "en": {
+    "英文": {
       "nav": {
         "brand": "YKT Group",
         "about": "Group Entities",
@@ -24,38 +30,40 @@
       "hero": {
         "title": "Global Diversified Private Holding Group",
         "desc": "We focus on three long-term core tracks including cultural & creative industry, characteristic plateau agriculture and AI healthcare devices. Relying on capital empowerment, resource integration and independent R&D, we connect domestic operation with overseas layout to form a diversified, risk-resistant and sustainable industrial system."
+      },
+      "titles": {
+        "firmTitle": "Group Legal Entities",
+        "bizTitle": "Three Major Group Business Systems",
+        "netTitle": "Global Operation Layout Network",
+        "visionTitle": "Long-term Development Vision"
       }
     }
   },
   "companyData": {
-    "zh": [
+    "中文": [
       {
         "groupTitle": "赋能平台",
         "firmList": [
           {
-            "type": "cn",
             "name": "春能优方投资有限公司",
             "scope": "实业投资管理、股权投资、资产管理、企业管理咨询、投融资顾问服务"
           },
           {
-            "type": "cn",
             "name": "北京一颗糖文化科技有限公司",
-            "scope": "品牌整体管理、集团IP统筹运营、文创项目孵化、品牌策划与视觉设计服务"
+            "scope": "品牌整体运营、集团IP统筹运营、文创项目孵化、品牌策划与视觉设计服务"
           }
         ]
       },
       {
-        "groupTitle": "文创艺术板块",
+        "groupTitle": "文创艺术板块企业",
         "firmList": [
           {
-            "type": "cn",
             "name": "江苏撒蜜之城网络艺术科技有限公司",
-            "scope": "数字艺术创作、线上艺术平台运营、潮流衍生品设计、文旅方案策划执行"
+            "scope": "数字艺术创作、线上平台运营、潮流衍生品设计、文旅方案策划落地执行"
           },
           {
-            "type": "cn",
             "name": "北京撒蜜之城科技有限公司",
-            "scope": "跨境文创贸易、国内外展会落地执行、艺术版权交易、新媒体内容运营"
+            "scope": "跨境文创贸易、海内外展会承办、艺术版权交易、新媒体内容运营"
           }
         ]
       },
@@ -63,9 +71,8 @@
         "groupTitle": "高原生态农业板块",
         "firmList": [
           {
-            "type": "cn",
-            "name": "青海九色田野生物科技有限公司",
-            "scope": "高原农牧产品加工、特色粮油与肉品分装、农产品线上线下销售、跨境食品出口报备"
+            "name": "青海九色原野生物科技有限公司",
+            "scope": "高原农牧产品加工、粮油肉制品分装、农产品线上线下销售、跨境食品出口报备"
           }
         ]
       },
@@ -73,41 +80,36 @@
         "groupTitle": "AI医疗健康科技板块",
         "firmList": [
           {
-            "type": "cn",
-            "name": "上海慧迩美医疗科技有限公司",
+            "name": "上海慧尔美医疗科技有限公司",
             "scope": "智能医疗硬件研发、医疗器械销售、健康算法开发、医疗机构配套技术服务"
           },
           {
-            "type": "cn",
-            "name": "成都慧迩美科技有限公司",
-            "scope": "智能设备本地化运维、健康数字化系统搭建、西南区域渠道拓展与售后支持"
+            "name": "成都慧尔美科技有限公司",
+            "scope": "智能设备本地化运维、健康数字化平台搭建、西南区域渠道拓展与售后支持"
           }
         ]
       },
       {
-        "groupTitle": "马来西亚境外全资法人",
+        "groupTitle": "马来西亚境外全资主体",
         "firmList": [
           {
-            "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
-            "scope": "东南亚本土商品分销、马国本地商务对接、清真认证配套、区域仓储物流管理"
+            "scope": "东南亚本地商品分销、马来西亚本地商务对接、清真认证配套服务、区域仓储物流管理"
           }
         ]
       }
     ],
-    "en": [
+    "英文": [
       {
         "groupTitle": "Empowerment Platform",
         "firmList": [
           {
-            "type": "en",
             "name": "Chuneng Youfang Investment Co., Ltd.",
             "scope": "Industrial investment management, equity investment, asset management, enterprise management consulting, investment and financing advisory services"
           },
           {
-            "type": "en",
-            "name": "Beijing Yiketang Culture & Technology Co., Ltd.",
-            "scope": "Overall brand management, group IP operation management, cultural and creative project incubation, brand planning and visual design services"
+            "name": "Beijing Yiketang Culture Technology Co., Ltd.",
+            "scope": "Overall brand operation, group IP management, cultural and creative project incubation, brand planning and visual design services"
           }
         ]
       },
@@ -115,100 +117,94 @@
         "groupTitle": "Cultural & Art Subsidiaries",
         "firmList": [
           {
-            "type": "en",
-            "name": "Jiangsu Something Sweet Internet Art Technology Co., Ltd.",
-            "scope": "Digital art creation, online art platform operation, trendy derivative design, cultural tourism scheme planning and implementation"
+            "name": "Jiangsu Samicheng Network Art Technology Co., Ltd.",
+            "scope": "Digital art creation, online platform operation, trendy derivative design, cultural tourism scheme planning and implementation"
           },
           {
-            "type": "en",
-            "name": "Beijing Something Sweet Technology Co., Ltd.",
-            "scope": "Cross-border cultural and creative trade, domestic and overseas exhibition implementation, art copyright transaction, new media content operation"
+            "name": "Beijing Samicheng Technology Co., Ltd.",
+            "scope": "Cross-border cultural trade, exhibition organization at home and abroad, art copyright trading, new media content operation"
           }
         ]
       },
       {
-        "groupTitle": "Plateau Eco-Agriculture Enterprise",
+        "groupTitle": "Plateau Eco-agriculture Division",
         "firmList": [
           {
-            "type": "en",
-            "name": "Qinghai Nine-Color Highland Biotechnology Co., Ltd.",
-            "scope": "Processing of plateau agricultural and livestock products, packaging of grain, oil and meat products, online & offline agricultural product sales, cross-border food export filing"
+            "name": "Qinghai Jiuse Yuanye Biotechnology Co., Ltd.",
+            "scope": "Processing of plateau agricultural and livestock products, packaging of grain, oil and meat products, domestic sales, filing for cross-border food export"
           }
         ]
       },
       {
-        "groupTitle": "AI Medical & Health Technology",
+        "groupTitle": "AI Medical & Health Technology Division",
         "firmList": [
           {
-            "type": "en",
-            "name": "Shanghai Wise & Wellness Medical Technology Co., Ltd.",
-            "scope": "R&D of intelligent medical hardware, medical device sales, health algorithm development, supporting technical services for medical institutions"
+            "name": "Shanghai Huiermei Medical Technology Co., Ltd.",
+            "scope": "R&D of intelligent medical equipment, medical device sales, health algorithm development, supporting technical services for medical institutions"
           },
           {
-            "type": "en",
-            "name": "Chengdu Wise & Wellness Technology Co., Ltd.",
-            "scope": "Localized operation & maintenance of intelligent equipment, construction of digital health system, channel development and after-sales service in southwest China"
+            "name": "Chengdu Huiermei Technology Co., Ltd.",
+            "scope": "Local operation & maintenance of intelligent equipment, construction of health digital system, channel development & after-sales service in southwest China"
           }
         ]
       },
       {
-        "groupTitle": "Malaysia Overseas Wholly-owned Entity",
+        "groupTitle": "Wholly-owned Entity in Malaysia",
         "firmList": [
           {
-            "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
-            "scope": "Local commodity distribution in Southeast Asia, local business docking in Malaysia, halal certification supporting services, regional warehousing and logistics management"
+            "scope": "Local goods distribution across Southeast Asia, local business communication in Malaysia, halal certification supporting service, regional warehousing and logistics administration"
           }
         ]
       }
     ]
   },
   "businessTotal": {
-    "zh": [
+    "中文": [
       {
         "title": "文创文旅与潮流艺术业务",
-        "desc": "布局国内线下艺术展、文旅项目落地、数字IP开发，同时依托海外子公司完成文创产品出海分销，打通中马双向文创流通链路。"
+        "desc": "布局国内线下艺术展会、文旅项目落地、数字IP开发，依托海外子公司完成文创产品出海分销，搭建中马双向文创流通渠道。"
       },
       {
         "title": "高原特色农产品跨境贸易",
-        "desc": "依托青海原产地资源做标准化加工包装，面向国内电商渠道铺货，经由马来西亚公司完成东南亚市场货品清关、本地经销。"
+        "desc": "依托青海原产地资源完成标准化加工封装，面向东南亚市场完成清关、认证、经销全链路，由马来西亚公司负责本地铺货与经销。"
       },
       {
-        "title": "人工智能医疗硬件研发销售",
-        "desc": "自研健康监测硬件与配套算法系统，国内完成资质报备销售，同步向东南亚医疗机构输出智能医疗设备与技术方案。"
+        "title": "AI医疗硬件研发与销售",
+        "desc": "自主研发智能健康监测硬件，完成国内资质备案销售，同步对接东南亚医疗机构，输出硬件产品与配套数字化管理方案。"
       }
     ],
-    "en": [
+    "英文": [
       {
         "title": "Cultural Tourism & Trendy Art Business",
-        "desc": "Deploy offline art exhibitions and cultural tourism projects as well as digital IP development domestically. Distribute cultural products overseas via overseas subsidiaries to build a two-way cultural circulation channel between China and Malaysia."
+        "desc": "Deploy offline art exhibitions and cultural tourism projects in China, develop digital IP. Rely on overseas subsidiaries to distribute cultural products overseas and build a two-way cultural exchange channel between China and Malaysia."
       },
       {
-        "title": "Cross-border Trade of Highland Agricultural Products",
-        "desc": "Carry out standardized processing and packaging based on Qinghai raw materials for domestic e-commerce sales. Complete customs clearance and local distribution in Southeast Asia through the Malaysian entity."
+        "title": "Cross-border Trade of Plateau Featured Agricultural Products",
+        "desc": "Complete standardized processing and packaging based on Qinghai local resources. Handle customs clearance, certification and distribution for Southeast Asia markets, with the Malaysian entity responsible for local sales."
       },
       {
         "title": "R&D and Sales of AI Medical Hardware",
-        "desc": "Self-develop health monitoring hardware and supporting algorithm systems with domestic qualification filing and sales. Supply intelligent medical equipment and technical solutions to medical institutions across Southeast Asia."
+        "desc": "Independently develop intelligent health monitoring devices with domestic registration and sales, supply hardware and supporting digital management solutions for medical institutions in Southeast Asia."
       }
     ]
   },
   "globalNetwork": {
-    "zh": [
-      "中国大陆：全国一二线城市搭建销售、仓储、履约整套供应链体系",
-      "东南亚吉隆坡：YIKETANG SS SDN. BHD.全权负责属地化运营、货品分销、商务洽谈",
-      "欧洲巴黎办事处：欧盟品牌推广、国际合作资源对接、海外品牌合规管理",
-      "中东阿联酋办事处：农产、文创、智能硬件的中东区域贸易拓展"
+    "中文": [
+      "中国大陆：搭建覆盖全国的销售、仓储、履约整套供应链体系",
+      "马来西亚吉隆坡：集团东南亚总部，负责整个东盟市场商务对接与本地化运营",
+      "法国巴黎：欧洲艺术交流据点，开展艺术品合作、展会参展、品牌曝光推广",
+      "阿联酋迪拜：中东区域贸易窗口，负责农产品、医疗产品中东地区渠道拓展"
     ],
-    "en": [
-      "Chinese Mainland: Build a complete supply chain system covering sales, warehousing and fulfillment in major first and second-tier cities",
-      "Kuala Lumpur, Southeast Asia: YIKETANG SS SDN. BHD. takes full charge of local operation, goods distribution and business negotiation",
-      "Paris Office, Europe: EU brand promotion, international resource coordination and overseas brand compliance management",
-      "UAE Office, Middle East: Trade expansion of agricultural products, cultural products and intelligent hardware in the Middle East market"
+    "英文": [
+      "Chinese Mainland: Build a full supply chain system including nationwide sales, warehousing and fulfillment",
+      "Kuala Lumpur, Malaysia: Southeast Asia headquarters for ASEAN business negotiation and local operation",
+      "Paris, France: European art exchange hub for artwork cooperation, exhibition participation and brand promotion",
+      "Dubai, UAE: Middle East trade hub for channel expansion of agricultural and medical products"
     ]
   },
   "vision": {
-    "zh": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同、海外属地运营四大模块，以实体产品与自研技术作为出海核心载体，搭建抗风险能力充足的跨国产业集群。",
-    "en": "Adopt a stable holding operation model to centrally manage four modules including capital, brand, industrial collaboration and overseas localized operation. Build a risk-resistant multinational industrial cluster supported by physical products and self-developed technologies for global expansion."
+    "中文": "坚持稳健的集团控股运营模式，统筹文创、农业、医疗三大实体产业出海发展，以实体业务为根基，依托中马一带一路合作区位优势，打造国际化、合规化、长效化的跨国实业集团。",
+    "英文": "Adopt stable holding operation mode to promote overseas development of cultural creativity, agriculture and medical industries. Based on physical businesses and the China-Malaysia Belt and Road advantages, build an international, compliant and long-term transnational industrial group."
   }
 }
