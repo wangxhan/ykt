@@ -41,6 +41,66 @@
       }
     }
   },
+  "homeContent": {
+    "zh": {
+      "heroKicker": "全球私营控股集团",
+      "feature": {
+        "label": "战略聚焦",
+        "title": "以产业协同推动长期增长",
+        "desc": "覆盖文创、农业与健康科技的多赛道布局，持续构建稳定、可扩展的国际业务能力。",
+        "sideLabel": "核心赛道",
+        "sideValue": "文化 • 农业 • 健康"
+      },
+      "media": [
+        { "label": "文创与品牌", "title": "文创与品牌" },
+        { "label": "农业与生态", "title": "农业与生态" },
+        { "label": "智能健康", "title": "智能健康" }
+      ],
+      "journeyEyebrow": "经营模式",
+      "journeyTitle": "从产业创造到全球协同的增长闭环",
+      "journey": [
+        { "num": "01", "title": "创新与研发", "text": "围绕品牌、产品与技术创新，持续提升核心竞争力。" },
+        { "num": "02", "title": "资源整合", "text": "整合资本、品牌与业务板块，建立协同增长的组织能力。" },
+        { "num": "03", "title": "区域落地", "text": "在关键市场建立运营、分销与服务网络，强化业务可见度。" },
+        { "num": "04", "title": "全球协同", "text": "将创新能力、产业链和市场网络进一步扩展至国际协同体系。" }
+      ],
+      "capabilities": [
+        { "num": "01", "title": "资本整合", "text": "围绕产业投资与资源协同，强化集团层面的资本支持能力。" },
+        { "num": "02", "title": "产业协同", "text": "跨赛道联动，提升业务组合效率与协同价值。" },
+        { "num": "03", "title": "全球覆盖", "text": "在亚洲、欧洲及中东建立稳定的市场与运营网络。" },
+        { "num": "04", "title": "技术创新", "text": "依托自研技术与应用能力，支撑长期竞争优势与产品迭代。" }
+      ]
+    },
+    "en": {
+      "heroKicker": "Global Private Investment Group",
+      "feature": {
+        "label": "Strategic Focus",
+        "title": "Driving long-term growth through industrial synergy",
+        "desc": "With a diversified portfolio in culture, agriculture and healthcare technology, we continue to build a stable and scalable international business platform.",
+        "sideLabel": "Core tracks",
+        "sideValue": "Culture • Agri • Health"
+      },
+      "media": [
+        { "label": "Culture & Brand", "title": "Culture & Brand" },
+        { "label": "Agri & Ecology", "title": "Agri & Ecology" },
+        { "label": "AI Healthcare", "title": "AI Healthcare" }
+      ],
+      "journeyEyebrow": "Operating Model",
+      "journeyTitle": "From industrial creation to a global collaborative growth cycle",
+      "journey": [
+        { "num": "01", "title": "Innovation & R&D", "text": "Focused on brand, product and technology innovation to strengthen core competitiveness." },
+        { "num": "02", "title": "Resource Integration", "text": "Integrating capital, brands and business segments to build a collaborative growth capability." },
+        { "num": "03", "title": "Regional Expansion", "text": "Establishing operations, distribution and service networks in key markets to strengthen visibility." },
+        { "num": "04", "title": "Global Synergy", "text": "Extending innovation capacity, industrial chains and market networks into an international cooperation system." }
+      ],
+      "capabilities": [
+        { "num": "01", "title": "Capital Integration", "text": "Strengthening the group-level capital support capability through industrial investment and resource coordination." },
+        { "num": "02", "title": "Industrial Synergy", "text": "Improving portfolio efficiency and strategic value through cross-sector collaboration." },
+        { "num": "03", "title": "Global Reach", "text": "Building stable market and operating networks across Asia, Europe and the Middle East." },
+        { "num": "04", "title": "Technological Innovation", "text": "Leveraging self-developed technology to support long-term competitive advantage and product iteration." }
+      ]
+    }
+  },
   "values": {
     "zh": [
       {

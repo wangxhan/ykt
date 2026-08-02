@@ -61,6 +61,10 @@ function renderWholePage() {
     langToggle.setAttribute("aria-label", langKey === "zh" ? "Switch to English" : "切换到中文");
   }
 
+  if (window.pageType === "home") {
+    renderHomeContent(langKey);
+  }
+
   const navBrand = document.getElementById("navBrand");
   if (navBrand) navBrand.innerText = textData.nav.brand;
 
@@ -166,6 +170,61 @@ function renderPageSpecificContent() {
       <div class="contact-item">
         <span class="contact-label">${item.label}</span>
         <span class="contact-value">${item.value}</span>
+      </div>
+    `).join("");
+  }
+}
+
+function renderHomeContent(langKey) {
+  const homeData = siteData?.homeContent?.[langKey];
+  if (!homeData) return;
+
+  const heroKicker = document.getElementById("heroKicker");
+  if (heroKicker) heroKicker.textContent = homeData.heroKicker || "";
+
+  const featureLabel = document.getElementById("featureLabel");
+  if (featureLabel) featureLabel.textContent = homeData.feature.label || "";
+  const featureTitle = document.getElementById("featureTitle");
+  if (featureTitle) featureTitle.textContent = homeData.feature.title || "";
+  const featureDesc = document.getElementById("featureDesc");
+  if (featureDesc) featureDesc.textContent = homeData.feature.desc || "";
+  const featureSideLabel = document.getElementById("featureSideLabel");
+  if (featureSideLabel) featureSideLabel.textContent = homeData.feature.sideLabel || "";
+  const featureSideValue = document.getElementById("featureSideValue");
+  if (featureSideValue) featureSideValue.textContent = homeData.feature.sideValue || "";
+
+  const mediaCards = document.querySelectorAll(".media-card");
+  mediaCards.forEach((card, index) => {
+    const item = homeData.media?.[index];
+    const label = card.querySelector(".media-caption-label");
+    const title = card.querySelector(".media-caption-title");
+    if (label && item) label.textContent = item.label || "";
+    if (title && item) title.textContent = item.title || "";
+  });
+
+  const journeyEyebrow = document.getElementById("journeyEyebrow");
+  if (journeyEyebrow) journeyEyebrow.textContent = homeData.journeyEyebrow || "";
+  const journeyTitle = document.getElementById("journeyTitle");
+  if (journeyTitle) journeyTitle.textContent = homeData.journeyTitle || "";
+
+  const journeyGrid = document.getElementById("journeyGrid");
+  if (journeyGrid) {
+    journeyGrid.innerHTML = (homeData.journey || []).map(item => `
+      <div class="journey-item">
+        <span class="journey-num">${item.num}</span>
+        <h4>${item.title}</h4>
+        <p>${item.text}</p>
+      </div>
+    `).join("");
+  }
+
+  const capabilityGrid = document.getElementById("capabilityGrid");
+  if (capabilityGrid) {
+    capabilityGrid.innerHTML = (homeData.capabilities || []).map(item => `
+      <div class="capability-item">
+        <span class="capability-index">${item.num}</span>
+        <h4>${item.title}</h4>
+        <p>${item.text}</p>
       </div>
     `).join("");
   }
