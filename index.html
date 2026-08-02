@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>一颗糖集团 | YKT Group</title>
+  <title>一颗糖集团</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -11,12 +11,12 @@
   <div class="container header-inner">
     <div class="header-brand" id="navBrand"></div>
     <nav class="header-nav">
-      <a href="#firmList" class="nav-item" data-key="about"></a>
-      <a href="#groupBiz" class="nav-item" data-key="business"></a>
-      <a href="#globalNet" class="nav-item" data-key="globalNet"></a>
-      <a href="#vision" class="nav-item" data-key="vision"></a>
+      <a href="index.html" class="nav-item" data-key="about"></a>
+      <a href="about.html" class="nav-item" data-key="business"></a>
+      <a href="business.html" class="nav-item" data-key="globalNet"></a>
+      <a href="contact.html" class="nav-item" data-key="vision"></a>
     </nav>
-    <button class="lang-toggle">ZH / EN</button>
+    <button class="lang-toggle" aria-label="Switch language">中文</button>
   </div>
 </header>
 
@@ -27,10 +27,27 @@
   </div>
 </section>
 
+<section class="brand-values">
+  <div class="container">
+    <div class="value-grid" id="valueGrid"></div>
+  </div>
+</section>
+
+<section class="company-overview">
+  <div class="container overview-inner">
+    <div class="overview-copy">
+      <div class="eyebrow" id="overviewEyebrow"></div>
+      <h2 id="overviewTitle"></h2>
+      <p id="overviewText"></p>
+    </div>
+    <div class="overview-stats" id="overviewStats"></div>
+  </div>
+</section>
+
 <!-- 第一块：所有旗下公司（名称+本行经营范围） -->
 <section id="firmList" class="section-wrap">
   <div class="container">
-    <h2 class="section-main-title">集团旗下法人主体 <small>Group Legal Entities</small></h2>
+    <h2 id="firmListTitle" class="section-main-title"></h2>
     <div class="firm-wrapper" id="firmContainer"></div>
   </div>
 </section>
@@ -38,7 +55,7 @@
 <!-- 第二块：集团整体总业务（独立分区，和公司列表完全分开） -->
 <section id="groupBiz" class="section-wrap bg-light">
   <div class="container">
-    <h2 class="section-main-title">集团整体三大业务体系 <small>Three Major Group Business Systems</small></h2>
+    <h2 id="groupBizTitle" class="section-main-title"></h2>
     <div class="biz-wrapper" id="bizContainer"></div>
   </div>
 </section>
@@ -46,7 +63,7 @@
 <!-- 全球网络 -->
 <section id="globalNet" class="section-wrap">
   <div class="container">
-    <h2 class="section-main-title">全球运营布局网络 <small>Global Operation Layout Network</small></h2>
+    <h2 id="globalNetTitle" class="section-main-title"></h2>
     <ul class="global-list" id="globalList"></ul>
   </div>
 </section>
@@ -54,11 +71,48 @@
 <!-- 发展理念 -->
 <section id="vision" class="section-wrap bg-light">
   <div class="container">
-    <h2 class="section-main-title">长期发展理念 <small>Long-term Development Vision</small></h2>
+    <h2 id="visionTitle" class="section-main-title"></h2>
     <p class="vision-text"></p>
   </div>
 </section>
 
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <div class="eyebrow brand-cta-eyebrow" id="ctaEyebrow"></div>
+      <h3 id="ctaTitle"></h3>
+    </div>
+    <a href="#firmList" class="cta-button" id="ctaButton"></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand" id="footerBrand"></div>
+      <p class="footer-note" id="footerNote"></p>
+    </div>
+    <div class="footer-meta">
+      <div class="footer-meta-item">
+        <span class="meta-label" id="metaLabel1"></span>
+        <span class="meta-value" id="metaValue1"></span>
+      </div>
+      <div class="footer-meta-item">
+        <span class="meta-label" id="metaLabel2"></span>
+        <span class="meta-value" id="metaValue2"></span>
+      </div>
+      <div class="footer-meta-item">
+        <span class="meta-label" id="metaLabel3"></span>
+        <span class="meta-value" id="metaValue3"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <script src="./main.js"></script>
+<script>
+  window.pageType = 'home';
+  loadSourceData();
+</script>
 </body>
 </html>

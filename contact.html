@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发展理念</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand" id="navBrand"></div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-item" data-key="about"></a>
+        <a href="about.html" class="nav-item" data-key="business"></a>
+        <a href="business.html" class="nav-item" data-key="globalNet"></a>
+        <a href="contact.html" class="nav-item" data-key="vision"></a>
+      </nav>
+      <button class="lang-toggle" aria-label="Switch language">中文</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section-wrap">
+      <div class="container contact-wrapper">
+        <div class="contact-card">
+          <div class="eyebrow" id="contactEyebrow"></div>
+          <h1 id="contactTitle"></h1>
+          <p id="contactText"></p>
+        </div>
+        <div class="contact-list" id="contactList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand" id="footerBrand"></div>
+        <p class="footer-note" id="footerNote"></p>
+      </div>
+      <div class="footer-meta">
+        <div class="footer-meta-item">
+          <span class="meta-label" id="metaLabel1"></span>
+          <span class="meta-value" id="metaValue1"></span>
+        </div>
+        <div class="footer-meta-item">
+          <span class="meta-label" id="metaLabel2"></span>
+          <span class="meta-value" id="metaValue2"></span>
+        </div>
+        <div class="footer-meta-item">
+          <span class="meta-label" id="metaLabel3"></span>
+          <span class="meta-value" id="metaValue3"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script>
+    window.pageType = 'contact';
+    loadSourceData();
+  </script>
+</body>
+</html>

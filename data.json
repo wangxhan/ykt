@@ -1,22 +1,30 @@
 {
   "globalText": {
     "zh": {
+      "siteTitle": "一颗糖集团",
       "nav": {
         "brand": "一颗糖集团",
-        "about": "集团主体名录",
+        "about": "集团旗下法人主体",
         "business": "集团整体业务",
         "globalNet": "全球网络",
         "vision": "发展理念"
       },
       "hero": {
         "title": "全球化多元私营控股集团",
-        "desc": "深耕文创产业、高原特色农业、人工智能健康设备三大核心长期赛道，依托资本赋能、资源整合与技术自研优势，打通国内运营与海外出海链路，稳步构建多元化、抗风险、可持续发展的集团产业布局体系。"
+        "desc": "聚焦文创产业、高原特色农业与人工智能健康设备三大核心赛道，依托资本赋能、资源整合与技术创新优势，构建区域运营与国际协同网络，持续形成多元化、抗风险、可持续的发展格局。"
+      },
+      "sections": {
+        "firmList": "集团旗下法人主体",
+        "business": "集团整体三大业务体系",
+        "globalNet": "全球运营布局网络",
+        "vision": "长期发展理念"
       }
     },
     "en": {
+      "siteTitle": "YKT Group",
       "nav": {
         "brand": "YKT Group",
-        "about": "Group Entities",
+        "about": "Group Legal Entities",
         "business": "Group Business",
         "globalNet": "Global Network",
         "vision": "Corporate Vision"
@@ -24,6 +32,144 @@
       "hero": {
         "title": "Global Diversified Private Holding Group",
         "desc": "We focus on three long-term core tracks including cultural & creative industry, characteristic plateau agriculture and AI healthcare devices. Relying on capital empowerment, resource integration and independent R&D, we connect domestic operation with overseas layout to form a diversified, risk-resistant and sustainable industrial system."
+      },
+      "sections": {
+        "firmList": "Group Legal Entities",
+        "business": "Three Major Group Business Systems",
+        "globalNet": "Global Operation Layout Network",
+        "vision": "Long-term Development Vision"
+      }
+    }
+  },
+  "values": {
+    "zh": [
+      {
+        "title": "资本赋能",
+        "desc": "围绕产业投资、品牌运作与资源协同，构建稳定的集团资本支持体系。"
+      },
+      {
+        "title": "产业协同",
+        "desc": "文创、农业、医疗三大赛道联动耦合，形成集团内多链条协同增长。"
+      },
+      {
+        "title": "全球布局",
+        "desc": "以区域协同为基础，连接东南亚、欧洲及中东，构建稳定的国际业务网络。"
+      }
+    ],
+    "en": [
+      {
+        "title": "Capital Empowerment",
+        "desc": "Build a stable capital support system around industrial investment, brand operations and resource coordination."
+      },
+      {
+        "title": "Industry Synergy",
+        "desc": "Connect the cultural, agricultural and medical sectors to create a multi-chain growth model within the group."
+      },
+      {
+        "title": "Global Layout",
+        "desc": "Build a stable international business network through regional coordination across Southeast Asia, Europe and the Middle East."
+      }
+    ]
+  },
+  "overview": {
+    "zh": {
+      "eyebrow": "集团概况",
+      "title": "以长期战略布局，成就产业持续增长的协同体系",
+      "text": "一颗糖集团始终以稳健控股、产业协同和跨境拓展为发展主线，围绕文化创新、特色农业与智能健康三大关键赛道，推动集团在多区域市场形成持续、稳定的协同发展生态。",
+      "stats": [
+        { "label": "核心赛道", "value": "3" },
+        { "label": "覆盖区域", "value": "4" },
+        { "label": "运营模型", "value": "全链路" }
+      ]
+    },
+    "en": {
+      "eyebrow": "Group Overview",
+      "title": "Long-term strategic layout creates a collaborative system for sustained industrial growth",
+      "text": "YKT Group continues to focus on stable holding, industrial synergy and cross-border expansion. By integrating cultural innovation, specialty agriculture and smart healthcare, the group builds a sustainable and resilient development ecosystem at home and abroad.",
+      "stats": [
+        { "label": "Core tracks", "value": "3" },
+        { "label": "Regions covered", "value": "4" },
+        { "label": "Operating model", "value": "Full chain" }
+      ]
+    }
+  },
+  "footer": {
+    "zh": {
+      "brand": "一颗糖集团",
+      "note": "深耕文创、生态农业与智能健康产业，推动集团在多区域市场持续形成协同发展与长期价值。",
+      "cta": {
+        "eyebrow": "集团合作",
+        "title": "拥抱新机遇，开启多元化国际化布局",
+        "button": "查看集团主体"
+      },
+      "meta": [
+        { "label": "总部", "value": "北京" },
+        { "label": "业务网络", "value": "东南亚 / 欧洲 / 中东 / 中国" },
+        { "label": "联系方式", "value": "info@ykt-group.com" }
+      ]
+    },
+    "en": {
+      "brand": "YKT Group",
+      "note": "Focused on cultural creativity, ecological agriculture and smart health industries, driving a diversified and sustainable business ecosystem across multiple markets.",
+      "cta": {
+        "eyebrow": "Partnership",
+        "title": "Embrace new opportunities and expand a diversified international footprint",
+        "button": "View Group Entities"
+      },
+      "meta": [
+        { "label": "Headquarters", "value": "Beijing" },
+        { "label": "Business network", "value": "Southeast Asia / Europe / Middle East / China" },
+        { "label": "Contact", "value": "info@ykt-group.com" }
+      ]
+    }
+  },
+  "pageContent": {
+    "zh": {
+      "about": {
+        "title": "集团整体业务",
+        "summary": "围绕文创、特色农业与智能健康三大核心赛道，构建覆盖区域运营与国际协同的多元业务体系。",
+        "items": [
+          { "label": "核心业务", "value": "文创 · 农业 · 智能健康" },
+          { "label": "业务方向", "value": "品牌运营 + 产业协同 + 区域拓展" },
+          { "label": "布局方式", "value": "区域运营 + 国际协同" }
+        ]
+      },
+      "business": {
+        "title": "全球网络"
+      },
+      "contact": {
+        "eyebrow": "发展理念",
+        "title": "长期发展理念",
+        "text": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同与区域运营四大模块，以实体产品与自研技术作为国际业务核心载体，构建抗风险能力充足的跨区域产业协同网络。",
+        "items": [
+          { "label": "经营原则", "value": "稳健控股" },
+          { "label": "核心能力", "value": "资本 + 产业 + 技术" },
+          { "label": "战略方向", "value": "全球化布局" }
+        ]
+      }
+    },
+    "en": {
+      "about": {
+        "title": "Group Business",
+        "summary": "Centered on three core sectors—cultural creativity, specialty agriculture, and smart healthcare—we build a diversified business ecosystem across regional operations and international coordination.",
+        "items": [
+          { "label": "Core business", "value": "Culture · Agriculture · Smart Health" },
+          { "label": "Business focus", "value": "Brand operations + industrial synergy + regional expansion" },
+          { "label": "Layout model", "value": "Regional operations + international coordination" }
+        ]
+      },
+      "business": {
+        "title": "Global Network"
+      },
+      "contact": {
+        "eyebrow": "Corporate Vision",
+        "title": "Long-term Development Vision",
+        "text": "We uphold a prudent holding strategy and centrally manage four modules—capital, brand, industrial synergy and regional operations—using physical products and self-developed technologies as the core drivers of international business and building a risk-resistant multinational industrial network.",
+        "items": [
+          { "label": "Operating principle", "value": "Prudent holding" },
+          { "label": "Core capability", "value": "Capital + industry + technology" },
+          { "label": "Strategic direction", "value": "Global expansion" }
+        ]
       }
     }
   },
@@ -55,7 +201,7 @@
           {
             "type": "cn",
             "name": "北京撒蜜之城科技有限公司",
-            "scope": "跨境文创贸易、国内外展会落地执行、艺术版权交易、新媒体内容运营"
+            "scope": "跨境文创贸易、区域展会实施、艺术版权交易、新媒体内容运营"
           }
         ]
       },
@@ -85,12 +231,12 @@
         ]
       },
       {
-        "groupTitle": "马来西亚境外全资法人",
+        "groupTitle": "马来西亚全资法人",
         "firmList": [
           {
             "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
-            "scope": "东南亚本土商品分销、马国本地商务对接、清真认证配套、区域仓储物流管理"
+            "scope": "东南亚本地分销、区域商务对接、清真认证支持、仓储物流管理"
           }
         ]
       }
@@ -152,12 +298,12 @@
         ]
       },
       {
-        "groupTitle": "Malaysia Overseas Wholly-owned Entity",
+        "groupTitle": "Malaysia Wholly-owned Entity",
         "firmList": [
           {
             "type": "en",
             "name": "YIKETANG SS SDN. BHD.",
-            "scope": "Local commodity distribution in Southeast Asia, local business docking in Malaysia, halal certification supporting services, regional warehousing and logistics management"
+            "scope": "Southeast Asia distribution, regional business coordination, halal certification support, warehousing and logistics management"
           }
         ]
       }
@@ -167,38 +313,38 @@
     "zh": [
       {
         "title": "文创文旅与潮流艺术业务",
-        "desc": "布局国内线下艺术展、文旅项目落地、数字IP开发，同时依托海外子公司完成文创产品出海分销，打通中马双向文创流通链路。"
+        "desc": "围绕艺术展览、文旅项目与数字IP开发，推动文化产品在区域市场落地与传播，形成稳定的国际化文创运营链路。"
       },
       {
         "title": "高原特色农产品跨境贸易",
-        "desc": "依托青海原产地资源做标准化加工包装，面向国内电商渠道铺货，经由马来西亚公司完成东南亚市场货品清关、本地经销。"
+        "desc": "依托原产地资源进行标准化加工与包装，结合区域市场需求开展跨境销售与分销，提升产品流通效率与品牌价值。"
       },
       {
         "title": "人工智能医疗硬件研发销售",
-        "desc": "自研健康监测硬件与配套算法系统，国内完成资质报备销售，同步向东南亚医疗机构输出智能医疗设备与技术方案。"
+        "desc": "围绕健康监测硬件与算法系统开展研发与落地应用，支持医疗机构在区域市场的设备部署与服务协同。"
       }
     ],
     "en": [
       {
         "title": "Cultural Tourism & Trendy Art Business",
-        "desc": "Deploy offline art exhibitions and cultural tourism projects as well as digital IP development domestically. Distribute cultural products overseas via overseas subsidiaries to build a two-way cultural circulation channel between China and Malaysia."
+        "desc": "Focus on art exhibitions, cultural tourism projects and digital IP development to expand cultural products in regional markets and build a stable international creative operations network."
       },
       {
         "title": "Cross-border Trade of Highland Agricultural Products",
-        "desc": "Carry out standardized processing and packaging based on Qinghai raw materials for domestic e-commerce sales. Complete customs clearance and local distribution in Southeast Asia through the Malaysian entity."
+        "desc": "Utilize origin-based resources for standardized processing and packaging, and support cross-border sales and distribution to improve product circulation and market reach."
       },
       {
         "title": "R&D and Sales of AI Medical Hardware",
-        "desc": "Self-develop health monitoring hardware and supporting algorithm systems with domestic qualification filing and sales. Supply intelligent medical equipment and technical solutions to medical institutions across Southeast Asia."
+        "desc": "Develop health monitoring hardware and algorithm systems for practical deployment, supporting medical institutions with device implementation and service coordination in regional markets."
       }
     ]
   },
   "globalNetwork": {
     "zh": [
-      "中国大陆：全国一二线城市搭建销售、仓储、履约整套供应链体系",
-      "东南亚吉隆坡：YIKETANG SS SDN. BHD.全权负责属地化运营、货品分销、商务洽谈",
-      "欧洲巴黎办事处：欧盟品牌推广、国际合作资源对接、海外品牌合规管理",
-      "中东阿联酋办事处：农产、文创、智能硬件的中东区域贸易拓展"
+      "中国业务网络：覆盖全国重点城市的销售、仓储与履约协同体系",
+      "吉隆坡业务中心：YIKETANG SS SDN. BHD.负责区域运营、分销与商务协调",
+      "巴黎业务中心：负责欧盟市场品牌推广、国际合作资源对接与合规管理",
+      "阿联酋业务中心：推进农产、文创与智能硬件的中东区域贸易拓展"
     ],
     "en": [
       "Chinese Mainland: Build a complete supply chain system covering sales, warehousing and fulfillment in major first and second-tier cities",
@@ -208,7 +354,7 @@
     ]
   },
   "vision": {
-    "zh": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同、海外属地运营四大模块，以实体产品与自研技术作为出海核心载体，搭建抗风险能力充足的跨国产业集群。",
-    "en": "Adopt a stable holding operation model to centrally manage four modules including capital, brand, industrial collaboration and overseas localized operation. Build a risk-resistant multinational industrial cluster supported by physical products and self-developed technologies for global expansion."
+      "zh": "坚持稳健控股经营模式，统一管控资本、品牌、产业协同与区域运营四大模块，以实体产品与自研技术为核心，持续构建具备韧性与协同能力的跨区域产业网络。",
+      "en": "Adopt a stable holding operation model to centrally manage four modules including capital, brand, industrial collaboration and regional operations. Using physical products and self-developed technologies as the core, the group continues to build a resilient and collaborative cross-regional industrial network."
   }
 }
